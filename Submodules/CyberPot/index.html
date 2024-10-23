@@ -1,0 +1,1603 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A centralized documentation for all the projects under ThreatMatrix." name="description"/>
+<meta content="ThreatMatrix Project" name="author"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.27" name="generator"/>
+<title>CyberPot - The All In One Multi Honeypot Platform - ThreatMatrix Project Documentation</title>
+<link href="../../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<link href="../../assests/css/SwaggerDark.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DB4K9LZPDZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DB4K9LZPDZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DB4K9LZPDZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="DARKUI" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#cyberpot-the-all-in-one-multi-honeypot-platform">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ThreatMatrix Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../static/threat_matrix_negative.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ThreatMatrix Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              CyberPot - The All In One Multi Honeypot Platform
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ThreatMatrix/introduction/">
+          
+  
+  ThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pythreatmatrix/">
+          
+  
+  PyThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../GoThreatMatrix/">
+          
+  
+  GoThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Guide-documentation/">
+          
+  
+  Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ThreatMatrix Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../static/threat_matrix_negative.png"/>
+</a>
+    ThreatMatrix Project Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    ThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/advanced_configuration/">
+<span class="md-ellipsis">
+    Advanced Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/usage/">
+<span class="md-ellipsis">
+    Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/advanced_usage/">
+<span class="md-ellipsis">
+    Advanced Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/contribute/">
+<span class="md-ellipsis">
+    Contribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/api_docs/">
+<span class="md-ellipsis">
+    API docs
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    PyThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            PyThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/">
+<span class="md-ellipsis">
+    Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Usage
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Modules
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/ThreatMatrixClass/">
+<span class="md-ellipsis">
+    ThreatMatrixClass
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/ThreatMatrixClientException/">
+<span class="md-ellipsis">
+    ThreatMatrixClientException
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/Tests/">
+<span class="md-ellipsis">
+    Tests
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    GoThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            GoThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GoThreatMatrix/">
+<span class="md-ellipsis">
+    index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Guide-documentation/">
+<span class="md-ellipsis">
+    Documentation guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Guide-docstrings/">
+<span class="md-ellipsis">
+    Docstrings guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    Submodules
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/edit/master/docs/Submodules/CyberPot/README.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/raw/master/docs/Submodules/CyberPot/README.md" title="View source of this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
+</a>
+<h1 id="cyberpot-the-all-in-one-multi-honeypot-platform">CyberPot - The All In One Multi Honeypot Platform</h1>
+<p>CyberPot is the all in one, optionally distributed, multiarch (amd64, arm64) honeypot plattform, supporting 20+ honeypots and countless visualization options using the Elastic Stack, animated live attack maps and lots of security tools to further improve the deception experience.
+<br/><br/></p>
+<h1 id="tldr">TL;DR</h1>
+<ol>
+<li>Meet the <a href="#system-requirements">system requirements</a>. The CyberPot installation needs at least 8-16 GB RAM, 128 GB free disk space as well as a working (outgoing non-filtered) internet connection.</li>
+<li><a href="#choose-your-distro">Download</a> or use a running, supported distribution.</li>
+<li>Install the ISO with as minimal packages / services as possible (<code>ssh</code> required)</li>
+<li>Install <code>curl</code>: <code>$ sudo [apt, dnf, zypper] install curl</code> if not installed already</li>
+<li>Run installer as non-root from <code>$HOME</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>env bash -c "$(curl -sL https://github.com/khulnasoft/cyberpot/raw/master/install.sh)"
+</span></code></pre></div>
+<ul>
+<li>Follow instructions, read messages, check for possible port conflicts and reboot</li>
+</ul>
+<!-- TOC -->
+<ul>
+<li><a href="#cyberpot---the-all-in-one-multi-honeypot-platform">CyberPot - The All In One Multi Honeypot Platform</a></li>
+<li><a href="#tldr">TL;DR</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#technical-concept">Technical Concept</a><ul>
+<li><a href="#technical-architecture">Technical Architecture</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#user-types">User Types</a></li>
+</ul>
+</li>
+<li><a href="#system-requirements">System Requirements</a><ul>
+<li><a href="#running-in-a-vm">Running in a VM</a></li>
+<li><a href="#running-on-hardware">Running on Hardware</a></li>
+<li><a href="#running-in-a-cloud">Running in a Cloud</a></li>
+<li><a href="#required-ports">Required Ports</a></li>
+</ul>
+</li>
+<li><a href="#system-placement">System Placement</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#choose-your-distro">Choose your distro</a></li>
+<li><a href="#raspberry-pi-4-8gb-support">Raspberry Pi 4 (8GB) Support</a></li>
+<li><a href="#get-and-install-cyberpot">Get and install CyberPot</a></li>
+<li><a href="#macos--windows">macOS &amp; Windows</a></li>
+<li><a href="#installation-types">Installation Types</a><ul>
+<li><a href="#standard--hive">Standard / HIVE</a></li>
+<li><a href="#distributed">Distributed</a></li>
+</ul>
+</li>
+<li><a href="#uninstall-cyberpot">Uninstall CyberPot</a></li>
+</ul>
+</li>
+<li><a href="#first-start">First Start</a><ul>
+<li><a href="#standalone-first-start">Standalone First Start</a></li>
+<li><a href="#distributed-deployment">Distributed Deployment</a><ul>
+<li><a href="#planning-and-certificates">Planning and Certificates</a></li>
+<li><a href="#deploying-sensors">Deploying Sensors</a></li>
+</ul>
+</li>
+<li><a href="#community-data-submission">Community Data Submission</a></li>
+<li><a href="#opt-in-hpfeeds-data-submission">Opt-In HPFEEDS Data Submission</a></li>
+</ul>
+</li>
+<li><a href="#remote-access-and-tools">Remote Access and Tools</a><ul>
+<li><a href="#ssh">SSH</a></li>
+<li><a href="#cyberpot-landing-page-">CyberPot Landing Page</a></li>
+<li><a href="#kibana-dashboard">Kibana Dashboard</a></li>
+<li><a href="#attack-map">Attack Map</a></li>
+<li><a href="#cyberchef">Cyberchef</a></li>
+<li><a href="#elasticvue">Elasticvue</a></li>
+<li><a href="#spiderfoot">Spiderfoot</a></li>
+</ul>
+</li>
+<li><a href="#configuration">Configuration</a><ul>
+<li><a href="#cyberpot-config-file">CyberPot Config File</a></li>
+<li><a href="#customize-cyberpot-honeypots-and-services">Customize CyberPot Honeypots and Services</a></li>
+</ul>
+</li>
+<li><a href="#maintenance">Maintenance</a><ul>
+<li><a href="#general-updates">General Updates</a></li>
+<li><a href="#update-script">Update Script</a></li>
+<li><a href="#daily-reboot">Daily Reboot</a></li>
+<li><a href="#known-issues">Known Issues</a><ul>
+<li><a href="#docker-images-fail-to-download">Docker Images Fail to Download</a></li>
+<li><a href="#cyberpot-networking-fails">CyberPot Networking Fails</a></li>
+</ul>
+</li>
+<li><a href="#start-cyberpot">Start CyberPot</a></li>
+<li><a href="#stop-cyberpot">Stop CyberPot</a></li>
+<li><a href="#cyberpot-data-folder">CyberPot Data Folder</a></li>
+<li><a href="#log-persistence">Log Persistence</a></li>
+<li><a href="#factory-reset">Factory Reset</a></li>
+<li><a href="#show-containers">Show Containers</a></li>
+<li><a href="#blackhole">Blackhole</a></li>
+<li><a href="#add-users-to-nginx-cyberpot-webui">Add Users to Nginx (CyberPot WebUI)</a></li>
+<li><a href="#import-and-export-kibana-objects">Import and Export Kibana Objects</a><ul>
+<li><a href="#export">Export</a></li>
+<li><a href="#import">Import</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#troubleshooting">Troubleshooting</a><ul>
+<li><a href="#logs">Logs</a></li>
+<li><a href="#ram-and-storage">RAM and Storage</a></li>
+</ul>
+</li>
+<li><a href="#contact">Contact</a><ul>
+<li><a href="#issues">Issues</a></li>
+<li><a href="#discussions">Discussions</a></li>
+</ul>
+</li>
+<li><a href="#licenses">Licenses</a></li>
+<li><a href="#credits">Credits</a><ul>
+<li><a href="#the-developers-and-development-communities-of">The developers and development communities of</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#testimonials">Testimonials</a>
+<!-- TOC --></p>
+<p><br/><br/></p>
+</li>
+</ul>
+<h1 id="disclaimer">Disclaimer</h1>
+<ul>
+<li>You install and run CyberPot within your responsibility. Choose your deployment wisely as a system compromise can never be ruled out.</li>
+<li>For fast help research the <a href="https://github.com/khulnasoft/cyberpot/issues">Issues</a> and <a href="https://github.com/khulnasoft/cyberpot/discussions">Discussions</a>.</li>
+<li>The software is designed and offered with best effort in mind. As a community and open source project it uses lots of other open source software and may contain bugs and issues. Report responsibly.</li>
+<li>Honeypots - by design - should not host any sensitive data. Make sure you don't add any.</li>
+<li>By default, your data is submitted to <a href="https://www.sicherheitstacho.eu/start/main">Sicherheitstacho</a>. You can disable this in the config (<code>~/cyberpot/docker-compose.yml</code>) by <a href="#community-data-submission">removing</a> the <code>ewsposter</code> section. But in this case sharing really is caring!
+  <br/><br/></li>
+</ul>
+<h1 id="technical-concept">Technical Concept</h1>
+<p>CyberPot's main components have been moved into the <code>cyberpotinit</code> Docker image allowing CyberPot to now support multiple Linux distributions, even macOS and Windows (although both limited to the feature set of Docker Desktop). CyberPot uses <a href="https://www.docker.com/">docker</a> and <a href="https://docs.docker.com/compose/">docker compose</a> to reach its goal of running as many honeypots and tools as possible simultaneously and thus utilizing the host's hardware to its maximum.
+<br/><br/></p>
+<p>CyberPot offers docker images for the following honeypots ...</p>
+<ul>
+<li><a href="https://github.com/huuck/ADBHoney">adbhoney</a>,</li>
+<li><a href="https://github.com/Cymmetria/ciscoasa_honeypot">ciscoasa</a>,</li>
+<li><a href="https://github.com/MalwareTech/CitrixHoneypot">citrixhoneypot</a>,</li>
+<li><a href="http://conpot.org/">conpot</a>,</li>
+<li><a href="https://github.com/cowrie/cowrie">cowrie</a>,</li>
+<li><a href="https://github.com/aelth/ddospot">ddospot</a>,</li>
+<li><a href="https://github.com/nsmfoo/dicompot">dicompot</a>,</li>
+<li><a href="https://github.com/DinoTools/dionaea">dionaea</a>,</li>
+<li><a href="https://gitlab.com/bontchev/elasticpot">elasticpot</a>,</li>
+<li><a href="https://github.com/skeeto/endlessh">endlessh</a>,</li>
+<li><a href="https://github.com/mushorg/glutton">glutton</a>,</li>
+<li><a href="https://github.com/yunginnanet/HellPot">hellpot</a>,</li>
+<li><a href="https://github.com/johnnykv/heralding">heralding</a>,</li>
+<li><a href="https://github.com/qeeqbox/honeypots">honeypots</a>,</li>
+<li><a href="https://github.com/armedpot/honeytrap/">honeytrap</a>,</li>
+<li><a href="https://gitlab.com/bontchev/ipphoney">ipphoney</a>,</li>
+<li><a href="https://github.com/thomaspatzke/Log4Pot">log4pot</a>,</li>
+<li><a href="https://github.com/awhitehatter/mailoney">mailoney</a>,</li>
+<li><a href="https://github.com/schmalle/medpot">medpot</a>,</li>
+<li><a href="https://github.com/cypwnpwnsocute/RedisHoneyPot">redishoneypot</a>,</li>
+<li><a href="https://github.com/SentryPeer/SentryPeer">sentrypeer</a>,</li>
+<li><a href="http://mushmush.org/">snare</a>,</li>
+<li><a href="http://mushmush.org/">tanner</a>,</li>
+<li><a href="https://github.com/gbrindisi/wordpot">wordpot</a></li>
+</ul>
+<p>... alongside the following tools ...</p>
+<ul>
+<li><a href="https://github.com/willfarrell/docker-autoheal">Autoheal</a> a tool to automatically restart containers with failed healthchecks.</li>
+<li><a href="https://gchq.github.io/CyberChef/">Cyberchef</a> a web app for encryption, encoding, compression and data analysis.</li>
+<li><a href="https://www.elastic.co/videos">Elastic Stack</a> to beautifully visualize all the events captured by CyberPot.</li>
+<li><a href="https://github.com/cars10/elasticvue/">Elasticvue</a> a web front end for browsing and interacting with an Elasticsearch cluster.</li>
+<li><a href="https://github.com/0x4D31/fatt">Fatt</a> a pyshark based script for extracting network metadata and fingerprints from pcap files and live network traffic.</li>
+<li><a href="https://github.com/khulnasoft-lab/cyberpot-attack-map">CyberPot-Attack-Map</a> a beautifully animated attack map for CyberPot.</li>
+<li><a href="https://lcamtuf.coredump.cx/p0f3/">P0f</a> is a tool for purely passive traffic fingerprinting.</li>
+<li><a href="https://github.com/smicallef/spiderfoot">Spiderfoot</a> an open source intelligence automation tool.</li>
+<li><a href="https://suricata.io/">Suricata</a> a Network Security Monitoring engine.</li>
+</ul>
+<p>... to give you the best out-of-the-box experience possible and an easy-to-use multi-honeypot system.
+<br/><br/></p>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<p><img alt="Architecture" src="doc/architecture.png"/></p>
+<p>The source code and configuration files are fully stored in the CyberPot GitHub repository. The docker images are built and preconfigured for the CyberPot environment.</p>
+<p>The individual Dockerfiles and configurations are located in the <a href="https://github.com/khulnasoft/cyberpot/tree/master/docker">docker folder</a>.
+<br/><br/></p>
+<h2 id="services">Services</h2>
+<p>CyberPot offers a number of services which are basically divided into five groups:</p>
+<ol>
+<li>System services provided by the OS<ul>
+<li>SSH for secure remote access.</li>
+</ul>
+</li>
+<li>Elastic Stack<ul>
+<li>Elasticsearch for storing events.</li>
+<li>Logstash for ingesting, receiving and sending events to Elasticsearch.</li>
+<li>Kibana for displaying events on beautifully rendered dashboards.</li>
+</ul>
+</li>
+<li>Tools<ul>
+<li>NGINX provides secure remote access (reverse proxy) to Kibana, CyberChef, Elasticvue, GeoIP AttackMap, Spiderfoot and allows for CyberPot sensors to securely transmit event data to the CyberPot hive.</li>
+<li>CyberChef a web app for encryption, encoding, compression and data analysis.</li>
+<li>Elasticvue a web front end for browsing and interacting with an Elasticsearch cluster.</li>
+<li>CyberPot Attack Map a beautifully animated attack map for CyberPot.</li>
+<li>Spiderfoot an open source intelligence automation tool.</li>
+</ul>
+</li>
+<li>Honeypots<ul>
+<li>A selection of the 23 available honeypots based on the selected <code>docker-compose.yml</code>.</li>
+</ul>
+</li>
+<li>Network Security Monitoring (NSM)
+   _ Fatt a pyshark based script for extracting network metadata and fingerprints from pcap files and live network traffic.
+   _ P0f is a tool for purely passive traffic fingerprinting. * Suricata a Network Security Monitoring engine.
+   <br/><br/></li>
+</ol>
+<h2 id="user-types">User Types</h2>
+<p>During the installation and during the usage of CyberPot there are two different types of accounts you will be working with. Make sure you know the differences of the different account types, since it is <strong>by far</strong> the most common reason for authentication errors.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Service</th>
+<th style="text-align: left;">Account Type</th>
+<th style="text-align: left;">Username / Group</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SSH</td>
+<td style="text-align: left;">OS</td>
+<td style="text-align: left;"><code>&lt;OS_USERNAME&gt;</code></td>
+<td style="text-align: left;">The user you chose during the installation of the OS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nginx</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>&lt;web_user&gt;</code> you chose during the installation of CyberPot.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CyberChef</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>&lt;web_user&gt;</code> you chose during the installation of CyberPot.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Elasticvue</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>&lt;web_user&gt;</code> you chose during the installation of CyberPot.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Geoip Attack Map</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>&lt;web_user&gt;</code> you chose during the installation of CyberPot.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spiderfoot</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>&lt;web_user&gt;</code> you chose during the installation of CyberPot.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CyberPot</td>
+<td style="text-align: left;">OS</td>
+<td style="text-align: left;"><code>cyberpot</code></td>
+<td style="text-align: left;"><code>cyberpot</code> this user / group is always reserved by the CyberPot services.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CyberPot Logs</td>
+<td style="text-align: left;">BasicAuth</td>
+<td style="text-align: left;"><code>&lt;LS_WEB_USER&gt;</code></td>
+<td style="text-align: left;"><code>LS_WEB_USER</code> are automatically managed.</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<h1 id="system-requirements">System Requirements</h1>
+<p>Depending on the <a href="#choose-your-distro">supported Linux distro images</a>, hive / sensor, installing on <a href="#running-on-hardware">real hardware</a>, in a <a href="#running-in-a-vm">virtual machine</a> or other environments there are different kind of requirements to be met regarding OS, RAM, storage and network for a successful installation of CyberPot (you can always adjust <code>~/cyberpot/docker-compose.yml</code> and <code>~/cyberpot/.env</code>to your needs to overcome these requirements).
+<br/><br/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">CyberPot Type</th>
+<th style="text-align: left;">RAM</th>
+<th style="text-align: left;">Storage</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Hive</td>
+<td style="text-align: left;">16GB</td>
+<td style="text-align: left;">256GB SSD</td>
+<td style="text-align: left;">As a rule of thumb, the more sensors &amp; data, the more RAM and storage is needed.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor</td>
+<td style="text-align: left;">8GB</td>
+<td style="text-align: left;">128GB SSD</td>
+<td style="text-align: left;">Since honeypot logs are persisted (~/cyberpot/data) for 30 days, storage depends on attack volume.</td>
+</tr>
+</tbody>
+</table>
+<p>CyberPot does require ...</p>
+<ul>
+<li>an IPv4 address via DHCP or statically assigned</li>
+<li>a working, non-proxied, internet connection
+  ... for a successful installation and operation.
+  <br/><br/>
+<em>If you need proxy support or otherwise non-standard features, you should check the docs of the <a href="#choose-your-distro">supported Linux distro images</a> and / or the <a href="https://docs.docker.com/">Docker documentation</a>.</em>
+<br/><br/></li>
+</ul>
+<h2 id="running-in-a-vm">Running in a VM</h2>
+<p>All of the <a href="#choose-your-distro">supported Linux distro images</a> will run in a VM which means CyberPot will just run fine. The following were tested / reported to work:</p>
+<ul>
+<li><a href="https://mac.getutm.app/">UTM (Intel &amp; Apple Silicon)</a></li>
+<li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
+<li><a href="https://www.vmware.com/products/fusion/fusion-evaluation.html">VMWare Fusion</a> and <a href="https://www.vmware.com/products/workstation-pro.html">VMWare Workstation</a></li>
+<li>KVM is reported to work as well.</li>
+</ul>
+<p><strong><em>Some configuration / setup hints:</em></strong></p>
+<ul>
+<li>While Intel versions run stable, Apple Silicon (arm64) support has known issues which in UTM may require switching <code>Display</code> to <code>Console Only</code> during initial installation of the OS and afterwards back to <code>Full Graphics</code>.</li>
+<li>During configuration you may need to enable promiscuous mode for the network interface in order for fatt, suricata and p0f to work properly.</li>
+<li>If you want to use a wifi card as a primary NIC for CyberPot, please be aware that not all network interface drivers support all wireless cards. In VirtualBox e.g. you have to choose the <em>"MT SERVER"</em> model of the NIC.
+  <br/><br/></li>
+</ul>
+<h2 id="running-on-hardware">Running on Hardware</h2>
+<p>CyberPot is only limited by the hardware support of the <a href="#choose-your-distro">supported Linux distro images</a>. It is recommended to check the HCL (hardware compatibility list) and test the supported distros with CyberPot before investing in dedicated hardware.
+<br/><br/></p>
+<h2 id="running-in-a-cloud">Running in a Cloud</h2>
+<p>CyberPot is tested on and known to run on ...</p>
+<ul>
+<li>Telekom OTC using the post install method
+  ... others may work, but remain untested.</li>
+</ul>
+<p>Some users report working installations on other clouds and hosters, i.e. Azure and GCP. Hardware requirements may be different. If you are unsure you should research <a href="https://github.com/khulnasoft/cyberpot/issues">issues</a> and <a href="https://github.com/khulnasoft/cyberpot/discussions">discussions</a> and run some functional tests. With CyberPot 24.04.0 and forward we made sure to remove settings that were known to interfere with cloud based installations.
+<br/><br/></p>
+<h2 id="required-ports">Required Ports</h2>
+<p>Besides the ports generally needed by the OS, i.e. obtaining a DHCP lease, DNS, etc. CyberPot will require the following ports for incoming / outgoing connections. Review the <a href="#technical-architecture">CyberPot Architecture</a> for a visual representation. Also some ports will show up as duplicates, which is fine since used in different editions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Port</th>
+<th style="text-align: left;">Protocol</th>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">80, 443</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">outgoing</td>
+<td style="text-align: left;">CyberPot Management: Install, Updates, Logs (i.e. OS, GitHub, DockerHub, Sicherheitstacho, etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;">64294</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">CyberPot Management: Sensor data transmission to hive (through NGINX reverse proxy) to 127.0.0.1:64305</td>
+</tr>
+<tr>
+<td style="text-align: left;">64295</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">CyberPot Management: Access to SSH</td>
+</tr>
+<tr>
+<td style="text-align: left;">64297</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">CyberPot Management Access to NGINX reverse proxy</td>
+</tr>
+<tr>
+<td style="text-align: left;">5555</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: ADBHoney</td>
+</tr>
+<tr>
+<td style="text-align: left;">5000</td>
+<td style="text-align: left;">udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: CiscoASA</td>
+</tr>
+<tr>
+<td style="text-align: left;">8443</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: CiscoASA</td>
+</tr>
+<tr>
+<td style="text-align: left;">443</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: CitrixHoneypot</td>
+</tr>
+<tr>
+<td style="text-align: left;">80, 102, 502, 1025, 2404, 10001, 44818, 47808, 50100</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Conpot</td>
+</tr>
+<tr>
+<td style="text-align: left;">161, 623</td>
+<td style="text-align: left;">udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Conpot</td>
+</tr>
+<tr>
+<td style="text-align: left;">22, 23</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Cowrie</td>
+</tr>
+<tr>
+<td style="text-align: left;">19, 53, 123, 1900</td>
+<td style="text-align: left;">udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Ddospot</td>
+</tr>
+<tr>
+<td style="text-align: left;">11112</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Dicompot</td>
+</tr>
+<tr>
+<td style="text-align: left;">21, 42, 135, 443, 445, 1433, 1723, 1883, 3306, 8081</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Dionaea</td>
+</tr>
+<tr>
+<td style="text-align: left;">69</td>
+<td style="text-align: left;">udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Dionaea</td>
+</tr>
+<tr>
+<td style="text-align: left;">9200</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Elasticpot</td>
+</tr>
+<tr>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Endlessh</td>
+</tr>
+<tr>
+<td style="text-align: left;">21, 22, 23, 25, 80, 110, 143, 443, 993, 995, 1080, 5432, 5900</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Heralding</td>
+</tr>
+<tr>
+<td style="text-align: left;">21, 22, 23, 25, 80, 110, 143, 389, 443, 445, 631, 1080, 1433, 1521, 3306, 3389, 5060, 5432, 5900, 6379, 6667, 8080, 9100, 9200, 11211</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: qHoneypots</td>
+</tr>
+<tr>
+<td style="text-align: left;">53, 123, 161, 5060</td>
+<td style="text-align: left;">udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: qHoneypots</td>
+</tr>
+<tr>
+<td style="text-align: left;">631</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: IPPHoney</td>
+</tr>
+<tr>
+<td style="text-align: left;">80, 443, 8080, 9200, 25565</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Log4Pot</td>
+</tr>
+<tr>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Mailoney</td>
+</tr>
+<tr>
+<td style="text-align: left;">2575</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Medpot</td>
+</tr>
+<tr>
+<td style="text-align: left;">6379</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Redishoneypot</td>
+</tr>
+<tr>
+<td style="text-align: left;">5060</td>
+<td style="text-align: left;">tcp/udp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: SentryPeer</td>
+</tr>
+<tr>
+<td style="text-align: left;">80</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Snare (Tanner)</td>
+</tr>
+<tr>
+<td style="text-align: left;">8090</td>
+<td style="text-align: left;">tcp</td>
+<td style="text-align: left;">incoming</td>
+<td style="text-align: left;">Honeypot: Wordpot</td>
+</tr>
+</tbody>
+</table>
+<p>Ports and availability of SaaS services may vary based on your geographical location.</p>
+<p>For some honeypots to reach full functionality (i.e. Cowrie or Log4Pot) outgoing connections are necessary as well, in order for them to download the attacker's malware. Please see the individual honeypot's documentation to learn more by following the <a href="#technical-concept">links</a> to their repositories.</p>
+<p><br/><br/></p>
+<h1 id="system-placement">System Placement</h1>
+<p>It is recommended to get yourself familiar with how CyberPot and the honeypots work before you start exposing towards the internet. For a quickstart run a CyberPot installation in a virtual machine.
+<br/><br/>
+Once you are familiar with how things work you should choose a network you suspect intruders in or from (i.e. the internet). Otherwise CyberPot will most likely not capture any attacks (unless you want to prove a point)! For starters it is recommended to put CyberPot in an unfiltered zone, where all TCP and UDP traffic is forwarded to CyberPot's network interface. To avoid probing for CyberPot's management ports you should put CyberPot behind a firewall and forward all TCP / UDP traffic in the port range of 1-64000 to CyberPot while allowing access to ports &gt; 64000 only from trusted IPs and / or only expose the <a href="#required-ports">ports</a> relevant to your use-case. If you wish to catch malware traffic on unknown ports you should not limit the ports you forward since glutton and honeytrap dynamically bind any TCP port that is not occupied by other honeypot daemons and thus give you a better representation of the risks your setup is exposed to.
+<br/><br/></p>
+<h1 id="installation">Installation</h1>
+<p><a href="#choose-your-distro">Download</a> one of the <a href="#choose-your-distro">supported Linux distro images</a>, follow the <a href="#tldr">TL;DR</a> instructions or <code>git clone</code> the CyberPot repository and run the installer <code>~/cyberpot/install.sh</code>. Running CyberPot on top of a running and supported Linux system is possible, but a clean installation is recommended to avoid port conflicts with running services. The CyberPot installer will require direct access to the internet as described <a href="#required-ports">here</a>.
+<br/><br/></p>
+<h2 id="choose-your-distro">Choose your distro</h2>
+<p><strong>Steps to Follow:</strong></p>
+<ol>
+<li>Download a supported Linux distribution from the list below.</li>
+<li>During installation choose a <strong>minimum</strong>, <strong>netinstall</strong> or <strong>server</strong> version that will only install essential packages.</li>
+<li><strong>Never</strong> install a graphical desktop environment such as Gnome or KDE. CyberPot will fail to work with it due to port conflicts.</li>
+<li>Make sure to install SSH, so you can connect to the machine remotely.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Distribution Name</th>
+<th style="text-align: left;">x64</th>
+<th style="text-align: left;">arm64</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://almalinux.org">Alma Linux OS 9.4 Boot ISO</a></td>
+<td style="text-align: left;"><a href="https://repo.almalinux.org/almalinux/9.4/isos/x86_64/AlmaLinux-9.4-x86_64-boot.iso">download</a></td>
+<td style="text-align: left;"><a href="https://repo.almalinux.org/almalinux/9.4/isos/aarch64/AlmaLinux-9.4-aarch64-boot.iso">download</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.debian.org/CD/netinst/index.en.html">Debian 12 Network Install</a></td>
+<td style="text-align: left;"><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.7.0-amd64-netinst.iso">download</a></td>
+<td style="text-align: left;"><a href="https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/debian-12.7.0-arm64-netinst.iso">download</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://fedoraproject.org/server/download">Fedora Server 40 Network Install</a></td>
+<td style="text-align: left;"><a href="https://download.fedoraproject.org/pub/fedora/linux/releases/40/Server/x86_64/iso/Fedora-Server-netinst-x86_64-40-1.14.iso">download</a></td>
+<td style="text-align: left;"><a href="https://download.fedoraproject.org/pub/fedora/linux/releases/40/Server/aarch64/iso/Fedora-Server-netinst-aarch64-40-1.14.iso">download</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://get.opensuse.org/tumbleweed/#download">OpenSuse Tumbleweed Network Image</a></td>
+<td style="text-align: left;"><a href="https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Current.iso">download</a></td>
+<td style="text-align: left;"><a href="https://download.opensuse.org/ports/aarch64/tumbleweed/iso/openSUSE-Tumbleweed-NET-aarch64-Current.iso">download</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://rockylinux.org/download">Rocky Linux OS 9.4 Boot ISO</a></td>
+<td style="text-align: left;"><a href="https://download.rockylinux.org/pub/rocky/9.4/isos/x86_64/Rocky-9.4-x86_64-boot.iso">download</a></td>
+<td style="text-align: left;"><a href="https://download.rockylinux.org/pub/rocky/9.4/isos/aarch64/Rocky-9.4-aarch64-boot.iso">download</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://ubuntu.com/download/server">Ubuntu 24.04 Live Server</a></td>
+<td style="text-align: left;"><a href="https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso">download</a></td>
+<td style="text-align: left;"><a href="https://cdimage.ubuntu.com/releases/24.04/release/ubuntu-24.04.1-live-server-arm64.iso">download</a></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h2 id="raspberry-pi-4-8gb-support">Raspberry Pi 4 (8GB) Support</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Distribution Name</th>
+<th style="text-align: left;">arm64</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.raspberrypi.com">Raspberry Pi OS (<strong>64Bit, Lite</strong>)</a></td>
+<td style="text-align: left;"><a href="https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz">download</a></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<h2 id="get-and-install-cyberpot">Get and install CyberPot</h2>
+<ol>
+<li>Clone the GitHub repository: <code>$ git clone https://github.com/khulnasoft/cyberpot</code> or follow the <a href="#tldr">TL;DR</a> and skip this section.</li>
+<li>Change into the <strong>cyberpot/</strong> folder: <code>$ cd cyberpot</code></li>
+<li>Run the installer as non-root: <code>$ ./install.sh</code>:<ul>
+<li>⚠️ <strong><em>Depending on your Linux distribution of choice the installer will:</em></strong><ul>
+<li>Change the SSH port to <code>tcp/64295</code></li>
+<li>Disable the DNS Stub Listener to avoid port conflicts with honeypots</li>
+<li>Set SELinux to Monitor Mode</li>
+<li>Set the firewall target for the public zone to ACCEPT</li>
+<li>Add Docker's repository and install Docker</li>
+<li>Install recommended packages</li>
+<li>Remove packages known to cause issues</li>
+<li>Add the current user to the docker group (allow docker interaction without <code>sudo</code>)</li>
+<li>Add <code>dps</code> and <code>dpsw</code> aliases (<code>grc docker ps -a</code>, <code>watch -c "grc --colour=on docker ps -a</code>)</li>
+<li>Add <code>la</code>, <code>ll</code> and <code>ls</code> aliases (for <code>exa</code>, a improved <code>ls</code> command)</li>
+<li>Add <code>mi</code> (for <code>micro</code>, a great alternative to <code>vi</code> and / or <code>nano</code>)</li>
+<li>Display open ports on the host (compare with CyberPot <a href="https://github.com/khulnasoft/cyberpot#required-ports">required</a> ports)</li>
+<li>Add and enable <code>cyberpot.service</code> to <code>/etc/systemd/system</code> so CyberPot can automatically start and stop</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Follow the installer instructions, you will have to enter your user (<code>sudo</code> or <code>root</code>) password at least once</li>
+<li>Check the installer messages for errors and open ports that might cause port conflicts</li>
+<li>Reboot: <code>$ sudo reboot</code>
+<br/><br/></li>
+</ol>
+<h2 id="macos-windows">macOS &amp; Windows</h2>
+<p>Sometimes it is just nice if you can spin up a CyberPot instance on macOS or Windows, i.e. for development, testing or just the fun of it. As Docker Desktop is rather limited not all honeypot types or CyberPot features are supported. Also remember, by default the macOS and Windows firewall are blocking access from remote, so testing is limited to the host. For production it is recommended to run CyberPot on <a href="#choose-your-distro">Linux</a>.<br/>
+To get things up and running just follow these steps:</p>
+<ol>
+<li>Install Docker Desktop for <a href="https://docs.docker.com/desktop/install/mac-install/">macOS</a> or <a href="https://docs.docker.com/desktop/install/windows-install/">Windows</a>.</li>
+<li>Clone the GitHub repository: <code>git clone https://github.com/khulnasoft/cyberpot</code> (in Windows make sure the code is checked out with <code>LF</code> instead of <code>CRLF</code>!)</li>
+<li>Go to: <code>cd ~/cyberpot</code></li>
+<li>Copy <code>cp compose/mac_win.yml ./docker-compose.yml</code></li>
+<li>Create a <code>WEB_USER</code> by running <code>~/cyberpot/genuser.sh</code> (macOS) or <code>~/cyberpot/genuserwin.ps1</code> (Windows)</li>
+<li>Adjust the <code>.env</code> file by changing <code>CYBERPOT_OSTYPE=linux</code> to either <code>mac</code> or <code>win</code>:
+   <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a># OSType (linux, mac, win)
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>#  Most docker features are available on linux
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>CYBERPOT_OSTYPE=mac
+</span></code></pre></div></li>
+<li>You have to ensure on your own there are no port conflicts keeping CyberPot from starting up.</li>
+<li>Start CyberPot: <code>docker compose up</code> or <code>docker compose up -d</code> if you want CyberPot to run in the background.</li>
+<li>Stop CyberPot: <code>CTRL-C</code> (it if was running in the foreground) and / or <code>docker compose down -v</code> to stop CyberPot entirely.</li>
+</ol>
+<h2 id="installation-types">Installation Types</h2>
+<h3 id="standard-hive">Standard / HIVE</h3>
+<p>With CyberPot Standard / HIVE all services, tools, honeypots, etc. will be installed on to a single host which also serves as a HIVE endpoint. Make sure to meet the <a href="#system-requirements">system requirements</a>. You can adjust <code>~/cyberpot/docker-compose.yml</code> to your personal use-case or create your very own configuration using <code>~/cyberpot/compose/customizer.py</code> for a tailored CyberPot experience to your needs.
+Once the installation is finished you can proceed to <a href="#first-start">First Start</a>.
+<br/><br/></p>
+<h3 id="distributed">Distributed</h3>
+<p>The distributed version of CyberPot requires at least two hosts</p>
+<ul>
+<li>the CyberPot <strong>HIVE</strong>, the standard installation of CyberPot (install this first!),</li>
+<li>and a CyberPot <strong>SENSOR</strong>, which will host only the honeypots, some tools and transmit log data to the <strong>HIVE</strong>.</li>
+<li>The <strong>SENSOR</strong> will not start before finalizing the <strong>SENSOR</strong> installation as described in <a href="#distributed-deployment">Distributed Deployment</a>.
+  <br/><br/></li>
+</ul>
+<h2 id="uninstall-cyberpot">Uninstall CyberPot</h2>
+<p>Uninstallation of CyberPot is only available on the <a href="#choose-your-distro">supported Linux distros</a>.<br/>
+To uninstall CyberPot run <code>~/cyberpot/uninstall.sh</code> and follow the uninstaller instructions, you will have to enter your password at least once.<br/>
+Once the uninstall is finished reboot the machine <code>sudo reboot</code>
+<br/><br/></p>
+<h1 id="first-start">First Start</h1>
+<p>Once the CyberPot Installer successfully finishes, the system needs to be rebooted (<code>sudo reboot</code>). Once rebooted you can log into the system using the user you setup during the installation of the system. Logins are according to the <a href="#user-types">User Types</a>:</p>
+<ul>
+<li>user: <strong>[<code>&lt;OS_USERNAME&gt;</code>]</strong></li>
+<li>pass: <strong>[password]</strong></li>
+</ul>
+<p>You can login via SSH to access the command line: <code>ssh -l &lt;OS_USERNAME&gt; -p 64295 &lt;your.ip&gt;</code>:</p>
+<ul>
+<li>user: <strong>[<code>&lt;OS_USERNAME&gt;</code>]</strong></li>
+<li>pass: <strong>[password, ssh key recommended]</strong></li>
+</ul>
+<p>You can also login from your browser and access the CyberPot WebUI and tools: <code>https://&lt;your.ip&gt;:64297</code></p>
+<ul>
+<li>user: <strong>[<code>&lt;WEB_USER&gt;</code>]</strong></li>
+<li>pass: <strong>[password]</strong>
+<br/><br/></li>
+</ul>
+<h2 id="standalone-first-start">Standalone First Start</h2>
+<p>There is not much to do except to login and check via <code>dps.sh</code> if all services and honeypots are starting up correctly and login to Kibana and / or Geoip Attack Map to monitor the attacks.
+<br/><br/></p>
+<h2 id="distributed-deployment">Distributed Deployment</h2>
+<h3 id="planning-and-certificates">Planning and Certificates</h3>
+<p>The distributed deployment involves planning as <strong>CyberPot Init</strong> will only create a self-signed certificate for the IP of the <strong>HIVE</strong> host which usually is suitable for simple setups. Since <strong>logstash</strong> will check for a valid certificate upon connection, a distributed setup involving <strong>HIVE</strong> to be reachable on multiple IPs (i.e. RFC 1918 and public NAT IP) and maybe even a domain name will result in a connection error where the certificate cannot be validated as such a setup needs a certificate with a common name and SANs (Subject Alternative Name).<br/>
+Before deploying any sensors make sure you have planned out domain names and IPs properly to avoid issues with the certificate. For more details see <a href="https://github.com/khulnasoft/cyberpot/issues/1543">issue #1543</a>.<br/>
+Adjust the example to your IP / domain setup and follow the commands to change the certificate of <strong>HIVE</strong>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo systemctl stop cyberpot
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>sudo openssl req \
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    -nodes \
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    -x509 \
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    -sha512 \
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    -newkey rsa:8192 \
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    -keyout "$HOME/cyberpot/data/nginx/cert/nginx.key" \
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    -out "$HOME/cyberpot/data/nginx/cert/nginx.crt" \
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    -days 3650 \
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    -subj '/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd' \
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>    -addext "subjectAltName = IP:192.168.1.200, IP:1.2.3.4, DNS:my.primary.domain, DNS:my.secondary.domain"
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>sudo chmod 774 $HOME/cyberpot/data/nginx/cert/*
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>sudo chown cyberpot:cyberpot $HOME/cyberpot/data/nginx/cert/*
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>sudo systemctl start cyberpot
+</span></code></pre></div>
+<p>The CyberPot configuration file (<code>.env</code>) does allow to disable the SSL verification for logstash connections from <strong>SENSOR</strong> to the <strong>HIVE</strong> by setting <code>LS_SSL_VERIFICATION=none</code>. For security reasons this is only recommended for lab or test environments.<br/><br/>
+If you choose to use a valid certificate for the <strong>HIVE</strong> signed by a CA (i.e. Let's Encrypt), logstash, and therefore the <strong>SENSOR</strong>, should have no problems to connect and transmit its logs to the <strong>HIVE</strong>.</p>
+<h3 id="deploying-sensors">Deploying Sensors</h3>
+<p>Once you have rebooted the <strong>SENSOR</strong> as instructed by the installer you can continue with the distributed deployment by logging into <strong>HIVE</strong> and go to <code>cd ~/cyberpot</code> folder. Make sure you understood the <a href="#planning-and-certificates">Planning and Certificates</a> before continuing with the actual deployment.</p>
+<p>If you have not done already generate a SSH key to securely login to the <strong>SENSOR</strong> and to allow <code>Ansible</code> to run a playbook on the sensor:</p>
+<ol>
+<li>Run <code>ssh-keygen</code>, follow the instructions and leave the passphrase empty:
+   <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>Generating public/private rsa key pair.
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>Enter file in which to save the key (/home/&lt;your_user&gt;/.ssh/id_rsa):
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>Enter passphrase (empty for no passphrase):
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>Enter same passphrase again:
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>Your identification has been saved in /home/&lt;your_user&gt;/.ssh/id_rsa
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>Your public key has been saved in /home/&lt;your_user&gt;/.ssh/id_rsa.pub
+</span></code></pre></div></li>
+<li>
+<p>Deploy the key to the SENSOR by running <code>ssh-copy-id -p 64295 &lt;SENSOR_SSH_USER&gt;@&lt;SENSOR_IP&gt;)</code>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/&lt;your_user&gt;/.ssh/id_rsa.pub"
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>The authenticity of host '[&lt;SENSOR_IP&gt;]:64295 ([&lt;SENSOR_IP&gt;]:64295)' can't be stablished.
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>ED25519 key fingerprint is SHA256:naIDxFiw/skPJadTcgmWZQtgt+CdfRbUCoZn5RmkOnQ.
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>This key is not known by any other names.
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>&lt;your_user&gt;@172.20.254.124's password:
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>Number of key(s) added: 1
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>Now try logging into the machine, with:   "ssh -p '64295' '&lt;your_user&gt;@&lt;SENSOR_IP&gt;'"
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>and check to make sure that only the key(s) you wanted were added.
+</span></code></pre></div>
+</li>
+<li>
+<p>As suggested follow the instructions to test the connection <code>ssh -p '64295' '&lt;your_user&gt;@&lt;SENSOR_IP&gt;'</code>.</p>
+</li>
+<li>Once the key is successfully deployed run <code>./deploy.sh</code> and follow the instructions.
+   <br/><br/></li>
+</ol>
+<h3 id="removing-sensors">Removing Sensors</h3>
+<p>Identify the <code>CYBERPOT_HIVE_USER</code> ENV on the SENSOR in the <code>$HOME/cyberpot/.env</code> config (it is a base64 encoded string). Now identify the same string in the <code>LS_WEB_USER</code> ENV on the HIVE in the <code>$HOME/cyberpot/.env</code> config. Remove the string and restart CyberPot.<br/>
+Now you can safely delete the SENSOR machine.</p>
+<h2 id="community-data-submission">Community Data Submission</h2>
+<p>CyberPot is provided in order to make it accessible to everyone interested in honeypots. By default, the captured data is submitted to a community backend. This community backend uses the data to feed <a href="https://sicherheitstacho.eu">Sicherheitstacho</a>.
+You may opt out of the submission by removing the <code># Ewsposter service</code> from <code>~/cyberpot/docker-compose.yml</code> by following these steps:</p>
+<ol>
+<li>Stop CyberPot services: <code>systemctl stop cyberpot</code></li>
+<li>Open <code>~/cyberpot/docker-compose.yml</code>: <code>micro ~/cyberpot/docker-compose.yml</code></li>
+<li>Remove the following lines, save and exit micro (<code>CTRL+Q</code>):</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a># Ewsposter service
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>  ewsposter:
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>    container_name: ewsposter
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>    restart: always
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>    depends_on:
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>      cyberpotinit:
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>        condition: service_healthy
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>    networks:
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>     - ewsposter_local
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>    environment:
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>     - EWS_HPFEEDS_ENABLE=false
+</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>     - EWS_HPFEEDS_HOST=host
+</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a>     - EWS_HPFEEDS_PORT=port
+</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>     - EWS_HPFEEDS_CHANNELS=channels
+</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a>     - EWS_HPFEEDS_IDENT=user
+</span><span id="__span-5-16"><a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a>     - EWS_HPFEEDS_SECRET=secret
+</span><span id="__span-5-17"><a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>     - EWS_HPFEEDS_TLSCERT=false
+</span><span id="__span-5-18"><a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a>     - EWS_HPFEEDS_FORMAT=json
+</span><span id="__span-5-19"><a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a>    image: ${CYBERPOT_REPO}/ewsposter:${CYBERPOT_VERSION}
+</span><span id="__span-5-20"><a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a>    pull_policy: ${CYBERPOT_PULL_POLICY}
+</span><span id="__span-5-21"><a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a>    volumes:
+</span><span id="__span-5-22"><a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a>     - ${CYBERPOT_DATA_PATH}:/data
+</span><span id="__span-5-23"><a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a>     - ${CYBERPOT_DATA_PATH}/ews/conf/ews.ip:/opt/ewsposter/ews.ip
+</span></code></pre></div>
+<ol>
+<li>Start CyberPot services: <code>systemctl start cyberpot</code></li>
+</ol>
+<p>It is encouraged not to disable the data submission as it is the main purpose of the community approach - as you all know <strong>sharing is caring</strong> 😍
+<br/><br/></p>
+<h2 id="opt-in-hpfeeds-data-submission">Opt-In HPFEEDS Data Submission</h2>
+<p>As an Opt-In it is possible to share CyberPot data with 3<sup>rd</sup> party HPFEEDS brokers.</p>
+<ol>
+<li>Follow the instructions <a href="#community-data-submission">here</a> to stop the CyberPot services and open <code>~/cyberpot/docker-compose.yml</code>.</li>
+<li>Scroll down to the <code>ewsposter</code> section and adjust the HPFEEDS settings to your needs.</li>
+<li>If you need to add a CA certificate add it to <code>~/cyberpot/data/ews/conf</code> and set <code>EWS_HPFEEDS_TLSCERT=/data/ews/conf/&lt;your_ca.crt&gt;</code>.</li>
+<li>Start CyberPot services: <code>systemctl start cyberpot</code>.
+   <br/><br/></li>
+</ol>
+<h1 id="remote-access-and-tools">Remote Access and Tools</h1>
+<p>Remote access to your host / CyberPot is possible with SSH (on <strong><code>tcp/64295</code></strong>) and some services and tools come with CyberPot to make some of your research tasks a lot easier.
+<br/><br/></p>
+<h2 id="ssh">SSH</h2>
+<p>According to the <a href="#user-types">User Types</a> you can login via SSH to access the command line: <code>ssh -l &lt;OS_USERNAME&gt; -p 64295 &lt;your.ip&gt;</code>:</p>
+<ul>
+<li>user: <strong>[<code>&lt;OS_USERNAME&gt;</code>]</strong></li>
+<li>pass: <strong>[password]</strong>
+<br/><br/></li>
+</ul>
+<h2 id="cyberpot-landing-page">CyberPot Landing Page</h2>
+<p>According to the <a href="#user-types">User Types</a> you can open the CyberPot Landing Page from your browser via <code>https://&lt;your.ip&gt;:64297</code>:</p>
+<ul>
+<li>user: <strong>[<code>&lt;WEB_USER&gt;</code>]</strong></li>
+<li>pass: <strong>[password]</strong></li>
+</ul>
+<p><img alt="CyberPot-WebUI" src="doc/cyberpotwebui.png">
+<br/><br/></img></p>
+<h2 id="kibana-dashboard">Kibana Dashboard</h2>
+<p>On the CyberPot Landing Page just click on <code>Kibana</code> and you will be forwarded to Kibana. You can select from a large variety of dashboards and visualizations all tailored to the CyberPot supported honeypots.</p>
+<p><img alt="Dashbaord" src="doc/kibana_a.png"/>
+<br/><br/></p>
+<h2 id="attack-map">Attack Map</h2>
+<p>On the CyberPot Landing Page just click on <code>Attack Map</code> and you will be forwarded to the Attack Map. Since the Attack Map utilizes web sockets you may need to re-enter the <code>&lt;WEB_USER&gt;</code> credentials.</p>
+<p><img alt="AttackMap" src="doc/attackmap.png"/>
+<br/><br/></p>
+<h2 id="cyberchef">Cyberchef</h2>
+<p>On the CyberPot Landing Page just click on <code>Cyberchef</code> and you will be forwarded to Cyberchef.</p>
+<p><img alt="Cyberchef" src="doc/cyberchef.png"/>
+<br/><br/></p>
+<h2 id="elasticvue">Elasticvue</h2>
+<p>On the CyberPot Landing Page just click on <code>Elastivue</code> and you will be forwarded to Elastivue.</p>
+<p><img alt="Elasticvue" src="doc/elasticvue.png"/>
+<br/><br/></p>
+<h2 id="spiderfoot">Spiderfoot</h2>
+<p>On the CyberPot Landing Page just click on <code>Spiderfoot</code> and you will be forwarded to Spiderfoot.</p>
+<p><img alt="Spiderfoot" src="doc/spiderfoot.png"/>
+<br/><br/></p>
+<h1 id="configuration">Configuration</h1>
+<h2 id="cyberpot-config-file">CyberPot Config File</h2>
+<p>CyberPot offers a configuration file providing variables not only for the docker services (i.e. honeypots and tools) but also for the docker compose environment. The configuration file is hidden in <code>~/tpoce/.env</code>. There is also an example file (<code>env.example</code>) which holds the default configuration.<br/>
+Before the first start run <code>~/cyberpot/genuser.sh</code> or setup the <code>WEB_USER</code> manually as described <a href="#add-users-to-nginx-cyberpot-webui">here</a>.</p>
+<h2 id="customize-cyberpot-honeypots-and-services">Customize CyberPot Honeypots and Services</h2>
+<p>In <code>~/cyberpot/compose</code> you will find everything you need to adjust the CyberPot Standard / HIVE installation:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>customizer.py
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>mac_win.yml
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>mini.yml
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>mobile.yml
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>raspberry_showcase.yml
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>sensor.yml
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>standard.yml
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>cyberpot_services.yml
+</span></code></pre></div>
+<p>The <code>.yml</code> files are docker compose files, each representing a different set of honeypots and tools with <code>cyberpot_services.yml</code> being a template for <code>customizer.py</code> to create a customized docker compose file.<br/><br/>
+To activate a compose file follow these steps:</p>
+<ol>
+<li>Stop CyberPot with <code>systemctl stop cyberpot</code>.</li>
+<li>Copy the docker compose file <code>cp ~/cyberpot/compose/&lt;dockercompose.yml&gt; ~/cyberpot/docker-compose.yml</code>.</li>
+<li>Start CyberPot with <code>systemctl start cyberpot</code>.</li>
+</ol>
+<p>To create your customized docker compose file:</p>
+<ol>
+<li>Go to <code>cd ~/cyberpot/compose</code>.</li>
+<li>Run <code>python3 customizer.py</code>.</li>
+<li>The script will guide you through the process of creating your own <code>docker-compose.yml</code>. As some honeypots and services occupy the same ports it will check if any port conflicts are present and notify regarding the conflicting services. You then can resolve them manually by adjusting <code>docker-compose-custom.yml</code> or re-run the script.</li>
+<li>Stop CyberPot with <code>systemctl stop cyberpot</code>.</li>
+<li>Copy the custom docker compose file: <code>cp docker-compose-custom.yml ~/cyberpot</code> and <code>cd ~/cyberpot</code>.</li>
+<li>Check if everything works by running <code>docker-compose -f docker-compose-custom.yml up</code>. In case of errors follow the <a href="https://docs.docker.com/compose/compose-file/">Docker Compose Specification</a> for mitigation. Most likely it is just a port conflict you can adjust by editing the docker compose file.</li>
+<li>If everything works just fine press <code>CTRL-C</code> to stop the containers and run <code>docker-compose -f docker-compose-custom.yml down -v</code>.</li>
+<li>Replace docker compose file with the new and successfully tested customized docker compose file <code>mv ~/cyberpot/docker-compose-custom.yml ~/cyberpot/docker-compose.yml</code>.</li>
+<li>Start CyberPot with <code>systemctl start cyberpot</code>.
+   <br/><br/></li>
+</ol>
+<h1 id="maintenance">Maintenance</h1>
+<p>CyberPot is designed to be low maintenance. Since almost everything is provided through docker images there is basically nothing you have to do but let it run. We will upgrade the docker images regularly to reduce the risks of compromise; however you should read this section closely.<br/><br/>
+Should an update fail, opening an issue or a discussion will help to improve things in the future, but the offered solution will <strong><em>always</em></strong> be to perform a <strong><em>fresh install</em></strong> as we simply <strong><em>cannot</em></strong> provide any support for lost data!
+<br/><br/></p>
+<h2 id="general-updates">General Updates</h2>
+<p>CyberPot security depends on the updates provided for the <a href="#choose-your-distro">supported Linux distro images</a>. Make sure to review the OS documentation and ensure updates are installed regularly by the OS. By default (<code>~/cyberpot/.env</code>) <code>CYBERPOT_PULL_POLICY=always</code> will ensure that at every CyberPot start docker will check for new docker images and download them before creating the containers.
+<br/><br/></p>
+<h2 id="update-script">Update Script</h2>
+<p>CyberPot releases are offered through GitHub and can be pulled using <code>~/cyberpot/update.sh</code>.<br/>
+<strong><em>If you made any relevant changes to the CyberPot config files make sure to create a backup first!</em></strong><br/>
+<strong><em>Updates may have unforeseen consequences. Create a backup of the machine or the files most valuable to your work!</em></strong><br/></p>
+<p>The update script will ...</p>
+<ul>
+<li><strong><em>mercilessly</em></strong> overwrite local changes to be in sync with the CyberPot master branch</li>
+<li>create a full backup of the <code>~/cyberpot</code> folder</li>
+<li>update all files in <code>~/cyberpot</code> to be in sync with the CyberPot master branch</li>
+<li>restore your custom <code>ews.cfg</code> from <code>~/cyberpot/data/ews/conf</code> and the CyberPot configuration (<code>~/cyberpot/.env</code>).</li>
+</ul>
+<h2 id="daily-reboot">Daily Reboot</h2>
+<p>By default CyberPot will add a daily reboot including some cleaning up. You can adjust this line with <code>sudo crontab -e</code></p>
+<div class="highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>#Ansible: CyberPot Daily Reboot
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>42 2 * * * bash -c 'systemctl stop cyberpot.service &amp;&amp; docker container prune -f; docker image prune -f; docker volume prune -f; /usr/sbin/shutdown -r +1 "CyberPot Daily Reboot"'
+</span></code></pre></div>
+<h2 id="known-issues">Known Issues</h2>
+<p>The following issues are known, simply follow the described steps to solve them.
+<br/><br/></p>
+<h3 id="docker-images-fail-to-download">Docker Images Fail to Download</h3>
+<p>Some time ago Docker introduced download <a href="https://docs.docker.com/docker-hub/download-rate-limit/#:~:text=Docker%20Hub%20limits%20the%20number,pulls%20per%206%20hour%20period.">rate limits</a>. If you are frequently downloading Docker images via a single or shared IP, the IP address might have exhausted the Docker download rate limit. Login to your Docker account to extend the rate limit.</p>
+<div class="highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo su -
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>docker login
+</span></code></pre></div>
+<h3 id="cyberpot-networking-fails">CyberPot Networking Fails</h3>
+<p>CyberPot is designed to only run on machines with a single NIC. CyberPot will try to grab the interface with the default route, however it is not guaranteed that this will always succeed. At best use CyberPot on machines with only a single NIC.</p>
+<h2 id="start-cyberpot">Start CyberPot</h2>
+<p>The CyberPot service automatically starts and stops on each reboot (which occurs once on a daily basis as setup in <code>sudo crontab -l</code> during installation).
+<br/>
+If you want to manually start the CyberPot service you can do so via <code>systemctl start cyberpot</code> and observe via <code>dpsw</code> the startup of the containers.
+<br/><br/></p>
+<h2 id="stop-cyberpot">Stop CyberPot</h2>
+<p>The CyberPot service automatically starts and stops on each reboot (which occurs once on a daily basis as setup in <code>sudo crontab -l</code> during installation).
+<br/>
+If you want to manually stop the CyberPot service you can do so via <code>systemctl stop cyberpot</code> and observe via <code>dpsw</code> the shutdown of the containers.
+<br/><br/></p>
+<h2 id="cyberpot-data-folder">CyberPot Data Folder</h2>
+<p>All persistent log files from the honeypots, tools and CyberPot related services are stored in <code>~/cyberpot/data</code>. This includes collected artifacts which are not transmitted to the Elastic Stack.
+<br/><br/></p>
+<h2 id="log-persistence">Log Persistence</h2>
+<p>All log data stored in the <a href="#cyberpot-data-folder">CyberPot Data Folder</a> will be persisted for 30 days by default.
+<br/>
+Elasticsearch indices are handled by the <code>cyberpot</code> Index Lifecycle Policy which can be adjusted directly in Kibana (make sure to "Include managed system policies").
+<img alt="IndexManagement1" src="doc/kibana_b.png"/>
+<br/><br/></p>
+<p>By default the <code>cyberpot</code> Index Lifecycle Policy keeps the indices for 30 days. This offers a good balance between storage and speed. However you may adjust the policy to your needs.
+<img alt="IndexManagement2" src="doc/kibana_c.png"/>
+<br/><br/></p>
+<h2 id="factory-reset">Factory Reset</h2>
+<p>All log data stored in the <a href="#cyberpot-data-folder">CyberPot Data Folder</a> (except for Elasticsearch indices, of course) can be erased by running <code>clean.sh</code>.
+Sometimes things might break beyond repair and it has never been easier to reset a CyberPot to factory defaults (make sure to enter <code>cd ~/cyberpot</code>).</p>
+<ol>
+<li>Stop CyberPot using <code>systemctl stop cyberpot</code>.</li>
+<li>Move / Backup the <code>~/cyberpot/data</code> folder to a safe place (this is optional, just in case).</li>
+<li>Delete the <code>~/cyberpot/data</code> folder using <code>sudo rm -rf ~/cyberpot/data</code>.</li>
+<li>Reset CyberPot to the last fetched commit:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>cd ~/cyberpot/
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>git reset --hard
+</span></code></pre></div>
+<ol>
+<li>Now you can run <code>~/cyberpot/install.sh</code>.
+   <br/><br/></li>
+</ol>
+<h2 id="show-containers">Show Containers</h2>
+<p>You can show all CyberPot relevant containers by running <code>dps</code> or <code>dpsw [interval]</code>. The <code>interval (s)</code> will re-run <code>dps.sh</code> periodically.
+<br/><br/></p>
+<h2 id="blackhole">Blackhole</h2>
+<p>Blackhole will run CyberPot in kind of a stealth mode manner without permanent visits of publicly known scanners and thus reducing the possibility of being exposed. While this is of course always a cat and mouse game the blackhole feature is null routing all requests from <a href="https://raw.githubusercontent.com/stamparm/maltrail/master/trails/static/mass_scanner.txt">known mass scanners</a> while still catching the events through Suricata.
+<br/>
+The feature is activated by setting <code>CYBERPOT_BLACKHOLE=DISABLED</code> in <code>~/cyberpot/.env</code>, then run <code>systemctl stop cyberpot</code> and <code>systemctl start cyberpot</code> or <code>sudo reboot</code>.
+<br/>
+Enabling this feature will drastically reduce attackers visibility and consequently result in less activity. However as already mentioned it is neither a guarantee for being completely stealth nor will it prevent fingerprinting of some honeypot services.
+<br/><br/></p>
+<h2 id="add-users-to-nginx-cyberpot-webui">Add Users to Nginx (CyberPot WebUI)</h2>
+<p>Nginx (CyberPot WebUI) allows you to add as many <code>&lt;WEB_USER&gt;</code> accounts as you want (according to the <a href="#user-types">User Types</a>).<br/>
+To <strong>add</strong> a new user run <code>~/cyberpot/genuser.sh</code>.<br/>
+To <strong>remove</strong> users open <code>~/cyberpot/.env</code>, locate <code>WEB_USER</code> and remove the corresponding base64 string (to decode: <code>echo &lt;base64_string&gt; | base64 -d</code>, or open CyberChef and load "From Base64" recipe).<br/>
+For the changes to take effect you need to restart CyberPot using <code>systemctl stop cyberpot</code> and <code>systemctl start cyberpot</code> or <code>sudo reboot</code>.
+<br/><br/></p>
+<h2 id="import-and-export-kibana-objects">Import and Export Kibana Objects</h2>
+<p>Some CyberPot updates will require you to update the Kibana objects. Either to support new honeypots or to improve existing dashboards or visualizations. Make sure to <strong><em>export</em></strong> first so you do not loose any of your adjustments.</p>
+<h3 id="export">Export</h3>
+<ol>
+<li>Go to Kibana</li>
+<li>Click on "Stack Management"</li>
+<li>Click on "Saved Objects"</li>
+<li>Click on "Export <no.> objects"</no.></li>
+<li>Click on "Export all"
+   This will export a NDJSON file with all your objects. Always run a full export to make sure all references are included.</li>
+</ol>
+<h3 id="import">Import</h3>
+<ol>
+<li><a href="https://github.com/khulnasoft/cyberpot/blob/master/docker/cyberpotinit/dist/etc/objects/kibana_export.ndjson.zip">Download the NDJSON file</a> and unzip it.</li>
+<li>Go to Kibana</li>
+<li>Click on "Stack Management"</li>
+<li>Click on "Saved Objects"</li>
+<li>Click on "Import" and leave the defaults (check for existing objects and automatically overwrite conflicts) if you did not make personal changes to the Kibana objects.</li>
+<li>Browse for NDJSON file
+   When asked: "If any of the objects already exist, do you want to automatically overwrite them?" you answer with "Yes, overwrite all".
+   <br/><br/></li>
+</ol>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>Generally CyberPot is offered <strong><em>as is</em></strong> without any commitment regarding support. Issues and discussions can be opened, but be prepared to include basic necessary info, so the community is able to help.
+<br/><br/></p>
+<h2 id="logs">Logs</h2>
+<ul>
+<li>Check if your containers are running correctly: <code>dps</code></li>
+<li>Check if your system resources are not exhausted: <code>htop</code>, <code>docker stats</code></li>
+<li>Check if there is a port conflict:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>systemctl stop cyberpot
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>grc netstat -tulpen
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>mi ~/cyberpot/docker-compose.yml
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>docker-compose -f ~/cyberpot/docker-compose.yml up
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>CTRL+C
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>docker-compose -f ~/cyberpot/docker-compose.yml down -v
+</span></code></pre></div>
+<ul>
+<li>Check individual container logs: <code>docker logs -f &lt;container_name&gt;</code></li>
+<li>Check <code>cyberpotinit</code> log: <code>cat ~/cyberpot/data/cyberpotinit.log</code>
+<br/><br/></li>
+</ul>
+<h2 id="ram-and-storage">RAM and Storage</h2>
+<p>The Elastic Stack is hungry for RAM, specifically <code>logstash</code> and <code>elasticsearch</code>. If the Elastic Stack is unavailable, does not receive any logs or simply keeps crashing it is most likely a RAM or storage issue.<br/>
+While CyberPot keeps trying to restart the services / containers run <code>docker logs -f &lt;container_name&gt;</code> (either <code>logstash</code> or <code>elasticsearch</code>) and check if there are any warnings or failures involving RAM.</p>
+<p>Storage failures can be identified easier via <code>htop</code>.
+<br/><br/></p>
+<h1 id="contact">Contact</h1>
+<p>CyberPot is provided <strong><em>as is</em></strong> open source <strong><em>without</em></strong> any commitment regarding support (<a href="#disclaimer">see the disclaimer</a>).</p>
+<p>If you are a security researcher and want to responsibly report an issue please get in touch with our <a href="https://www.telekom.com/en/corporate-responsibility/data-protection-data-security/security/details/introducing-deutsche-telekom-cert-358316">CERT</a>.
+<br/><br/></p>
+<h2 id="issues">Issues</h2>
+<p>Please report issues (errors) on our <a href="https://github.com/khulnasoft/cyberpot/issues">GitHub Issues</a>, but <a href="#troubleshooting">troubleshoot</a> first. Issues not providing information to address the error will be closed or converted into <a href="#discussions">discussions</a>.</p>
+<p>Use the search function first, it is possible a similar issue has been addressed or discussed already, with the solution just a search away.
+<br/><br/></p>
+<h2 id="discussions">Discussions</h2>
+<p>General questions, ideas, show &amp; tell, etc. can be addressed on our <a href="https://github.com/khulnasoft/cyberpot/discussions">GitHub Discussions</a>.</p>
+<p>Use the search function, it is possible a similar discussion has been opened already, with an answer just a search away.
+<br/><br/></p>
+<h1 id="licenses">Licenses</h1>
+<p>The software that CyberPot is built on uses the following licenses.
+<br/>GPLv2: <a href="https://github.com/mushorg/conpot/blob/master/LICENSE.txt">conpot</a>, <a href="https://github.com/DinoTools/dionaea/blob/master/LICENSE">dionaea</a>, <a href="https://github.com/armedpot/honeytrap/blob/master/LICENSE">honeytrap</a>, <a href="https://suricata.io/features/open-source/">suricata</a>
+<br/>GPLv3: <a href="https://github.com/huuck/ADBHoney">adbhoney</a>, <a href="https://gitlab.com/bontchev/elasticpot/-/blob/master/LICENSE">elasticpot</a>, <a href="https://github.com/khulnasoft/ews/">ewsposter</a>, <a href="https://github.com/thomaspatzke/Log4Pot/blob/master/LICENSE">log4pot</a>, <a href="https://github.com/0x4D31/fatt/blob/master/LICENSE">fatt</a>, <a href="https://github.com/johnnykv/heralding/blob/master/LICENSE.txt">heralding</a>, <a href="https://gitlab.com/bontchev/ipphoney/-/blob/master/LICENSE">ipphoney</a>, <a href="https://github.com/cypwnpwnsocute/RedisHoneyPot/blob/main/LICENSE">redishoneypot</a>, <a href="https://github.com/SentryPeer/SentryPeer/blob/main/LICENSE.GPL-3.0-only">sentrypeer</a>, <a href="https://github.com/mushorg/snare/blob/master/LICENSE">snare</a>, <a href="https://github.com/mushorg/snare/blob/master/LICENSE">tanner</a>
+<br/>Apache 2 License: <a href="https://github.com/gchq/CyberChef/blob/master/LICENSE">cyberchef</a>, <a href="https://github.com/nsmfoo/dicompot/blob/master/LICENSE">dicompot</a>, <a href="https://github.com/elasticsearch/elasticsearch/blob/master/LICENSE.txt">elasticsearch</a>, <a href="https://github.com/elasticsearch/logstash/blob/master/LICENSE">logstash</a>, <a href="https://github.com/elasticsearch/kibana/blob/master/LICENSE.md">kibana</a>, <a href="https://github.com/docker/docker/blob/master/LICENSE">docker</a>
+<br/>MIT license: <a href="https://github.com/willfarrell/docker-autoheal?tab=MIT-1-ov-file#readme">autoheal</a>, <a href="https://github.com/Cymmetria/ciscoasa_honeypot/blob/master/LICENSE">ciscoasa</a>, <a href="https://github.com/aelth/ddospot/blob/master/LICENSE">ddospot</a>, <a href="https://github.com/cars10/elasticvue/blob/master/LICENSE">elasticvue</a>, <a href="https://github.com/mushorg/glutton/blob/master/LICENSE">glutton</a>, <a href="https://github.com/yunginnanet/HellPot/blob/master/LICENSE">hellpot</a>, <a href="https://github.com/stamparm/maltrail/blob/master/LICENSE">maltrail</a>
+<br/> Unlicense: <a href="https://github.com/skeeto/endlessh/blob/master/UNLICENSE">endlessh</a>
+<br/> Other: <a href="https://github.com/MalwareTech/CitrixHoneypot#licencing-agreement-malwaretech-public-licence">citrixhoneypot</a>, <a href="https://github.com/cowrie/cowrie/blob/master/LICENSE.rst">cowrie</a>, <a href="https://github.com/awhitehatter/mailoney">mailoney</a>, <a href="https://www.elastic.co/licensing/elastic-license">Elastic License</a>, <a href="https://github.com/gbrindisi/wordpot">Wordpot</a>
+<br/> AGPL-3.0: <a href="https://github.com/qeeqbox/honeypots/blob/main/LICENSE">honeypots</a>
+<br/> <a href="https://creativecommons.org/publicdomain/zero/1.0/">Public Domain (CC)</a>: <a href="https://dataverse.harvard.edu/dataverse/harvard/?q=dicom">Harvard Dataverse</a>
+<br/><br/></p>
+<h1 id="credits">Credits</h1>
+<p>Without open source and the development community we are proud to be a part of, CyberPot would not have been possible! Our thanks are extended but not limited to the following people and organizations:</p>
+<h3 id="the-developers-and-development-communities-of">The developers and development communities of</h3>
+<ul>
+<li><a href="https://github.com/huuck/ADBHoney/graphs/contributors">adbhoney</a></li>
+<li><a href="https://github.com/Cymmetria/ciscoasa_honeypot/graphs/contributors">ciscoasa</a></li>
+<li><a href="https://github.com/MalwareTech/CitrixHoneypot/graphs/contributors">citrixhoneypot</a></li>
+<li><a href="https://github.com/mushorg/conpot/graphs/contributors">conpot</a></li>
+<li><a href="https://github.com/cowrie/cowrie/graphs/contributors">cowrie</a></li>
+<li><a href="https://github.com/aelth/ddospot/graphs/contributors">ddospot</a></li>
+<li><a href="https://github.com/nsmfoo/dicompot/graphs/contributors">dicompot</a></li>
+<li><a href="https://github.com/DinoTools/dionaea/graphs/contributors">dionaea</a></li>
+<li><a href="https://github.com/docker/docker/graphs/contributors">docker</a></li>
+<li><a href="https://gitlab.com/bontchev/elasticpot/-/project_members">elasticpot</a></li>
+<li><a href="https://github.com/elastic/elasticsearch/graphs/contributors">elasticsearch</a></li>
+<li><a href="https://github.com/cars10/elasticvue/graphs/contributors">elasticvue</a></li>
+<li><a href="https://github.com/skeeto/endlessh/graphs/contributors">endlessh</a></li>
+<li><a href="https://github.com/armedpot/ewsposter/graphs/contributors">ewsposter</a></li>
+<li><a href="https://github.com/0x4D31/fatt/graphs/contributors">fatt</a></li>
+<li><a href="https://github.com/mushorg/glutton/graphs/contributors">glutton</a></li>
+<li><a href="https://github.com/yunginnanet/HellPot/graphs/contributors">hellpot</a></li>
+<li><a href="https://github.com/johnnykv/heralding/graphs/contributors">heralding</a></li>
+<li><a href="https://github.com/qeeqbox/honeypots/graphs/contributors">honeypots</a></li>
+<li><a href="https://github.com/armedpot/honeytrap/graphs/contributors">honeytrap</a></li>
+<li><a href="https://gitlab.com/bontchev/ipphoney/-/project_members">ipphoney</a></li>
+<li><a href="https://github.com/elastic/kibana/graphs/contributors">kibana</a></li>
+<li><a href="https://github.com/elastic/logstash/graphs/contributors">logstash</a></li>
+<li><a href="https://github.com/thomaspatzke/Log4Pot/graphs/contributors">log4pot</a></li>
+<li><a href="https://github.com/awhitehatter/mailoney">mailoney</a></li>
+<li><a href="https://github.com/stamparm/maltrail/graphs/contributors">maltrail</a></li>
+<li><a href="https://github.com/schmalle/medpot/graphs/contributors">medpot</a></li>
+<li><a href="http://lcamtuf.coredump.cx/p0f3/">p0f</a></li>
+<li><a href="https://github.com/cypwnpwnsocute/RedisHoneyPot/graphs/contributors">redishoneypot</a></li>
+<li><a href="https://github.com/SentryPeer/SentryPeer/graphs/contributors">sentrypeer</a></li>
+<li><a href="https://github.com/smicallef/spiderfoot">spiderfoot</a></li>
+<li><a href="https://github.com/mushorg/snare/graphs/contributors">snare</a></li>
+<li><a href="https://github.com/mushorg/tanner/graphs/contributors">tanner</a></li>
+<li><a href="https://github.com/OISF/suricata/graphs/contributors">suricata</a></li>
+<li><a href="https://github.com/gbrindisi/wordpot">wordpot</a></li>
+</ul>
+<p><strong>The following companies and organizations</strong></p>
+<ul>
+<li><a href="https://www.docker.com/">docker</a></li>
+<li><a href="https://www.elastic.co/">elastic.io</a></li>
+<li><a href="https://www.honeynet.org/">honeynet project</a></li>
+</ul>
+<p><strong>... and of course *</strong>you<strong>* for joining the community!</strong>
+<br/><br/></p>
+<p>Thank you for playing 💖</p>
+<h1 id="testimonials">Testimonials</h1>
+<p>One of the greatest feedback we have gotten so far is by one of the Conpot developers:<br/>
+<strong><em>"[...] I highly recommend CyberPot which is ... it's not exactly a swiss army knife .. it's more like a swiss army soldier, equipped with a swiss army knife. Inside a tank. A swiss tank. [...]"</em></strong>
+<br/><br/>
+And from @robcowart (creator of <a href="https://github.com/robcowart/elastiflow">ElastiFlow</a>):<br/>
+<strong><em>"#CyberPot is one of the most well put together turnkey honeypot solutions. It is a must-have for anyone wanting to analyze and understand the behavior of malicious actors and the threat they pose to your organization."</em></strong>
+<br/><br/>
+<strong>Thank you!</strong></p>
+<p><img alt="Alt" src="https://repobeats.axiom.co/api/embed/75368f879326a61370e485df52906ae0c1f59fbb.svg" title="Repobeats analytics image"/></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © ThreatMatrix Project
+
+    </div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/khulnasoft" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://honeynetpublic.slack.com/archives/C01KVGMAKL6" rel="noopener" target="_blank" title="honeynetpublic.slack.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/company/khulnasoft" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="https://x.com/threat_matrix" rel="noopener" target="_blank" title="x.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.footer", "navigation.expand", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

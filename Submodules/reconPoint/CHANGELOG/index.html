@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A centralized documentation for all the projects under ThreatMatrix." name="description"/>
+<meta content="ThreatMatrix Project" name="author"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.27" name="generator"/>
+<title>Changelog - ThreatMatrix Project Documentation</title>
+<link href="../../../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../../assets/css/custom.css" rel="stylesheet"/>
+<link href="../../../assests/css/SwaggerDark.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DB4K9LZPDZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DB4K9LZPDZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DB4K9LZPDZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="DARKUI" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#changelog">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ThreatMatrix Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../../static/threat_matrix_negative.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ThreatMatrix Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ThreatMatrix/introduction/">
+          
+  
+  ThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../pythreatmatrix/">
+          
+  
+  PyThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../GoThreatMatrix/">
+          
+  
+  GoThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Guide-documentation/">
+          
+  
+  Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ThreatMatrix Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../../static/threat_matrix_negative.png"/>
+</a>
+    ThreatMatrix Project Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    ThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/advanced_configuration/">
+<span class="md-ellipsis">
+    Advanced Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/usage/">
+<span class="md-ellipsis">
+    Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/advanced_usage/">
+<span class="md-ellipsis">
+    Advanced Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/contribute/">
+<span class="md-ellipsis">
+    Contribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ThreatMatrix/api_docs/">
+<span class="md-ellipsis">
+    API docs
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    PyThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            PyThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../pythreatmatrix/">
+<span class="md-ellipsis">
+    Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Usage
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Modules
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../pythreatmatrix/ThreatMatrixClass/">
+<span class="md-ellipsis">
+    ThreatMatrixClass
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../pythreatmatrix/ThreatMatrixClientException/">
+<span class="md-ellipsis">
+    ThreatMatrixClientException
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../pythreatmatrix/Tests/">
+<span class="md-ellipsis">
+    Tests
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    GoThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            GoThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../GoThreatMatrix/">
+<span class="md-ellipsis">
+    index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Guide-documentation/">
+<span class="md-ellipsis">
+    Documentation guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Guide-docstrings/">
+<span class="md-ellipsis">
+    Docstrings guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Submodules
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#v220">
+<span class="md-ellipsis">
+      v2.2.0
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whats-changed">
+<span class="md-ellipsis">
+      What's Changed
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#213">
+<span class="md-ellipsis">
+      2.1.3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#whats-changed_1">
+<span class="md-ellipsis">
+      What's Changed
+    </span>
+</a>
+<nav aria-label="What's Changed" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-update">
+<span class="md-ellipsis">
+      Security Update
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug-fixes">
+<span class="md-ellipsis">
+      Bug Fixes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/edit/master/docs/Submodules/reconPoint/CHANGELOG.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/raw/master/docs/Submodules/reconPoint/CHANGELOG.md" title="View source of this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
+</a>
+<h1 id="changelog">Changelog</h1>
+<h2 id="v220">v2.2.0</h2>
+<h2 id="whats-changed">What's Changed</h2>
+<ul>
+<li>Update Dockerfile by @gitworkflows in <a href="https://github.com/khulnasoft/reconpoint/pull/37">https://github.com/khulnasoft/reconpoint/pull/37</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.1.1...v2.2.0">https://github.com/khulnasoft/reconpoint/compare/v2.1.1...v2.2.0</a></p>
+<h2 id="213">2.1.3</h2>
+<p><strong>Release Date: Aug 18, 2024</strong></p>
+<h2 id="whats-changed_1">What's Changed</h2>
+<h3 id="security-update">Security Update</h3>
+<ul>
+<li>(Security) CVE-2023-50094 Stored Cross-Site Scripting (XSS) via DNS Record Poisoning reported by @touhidshaikh Advisory <a href="https://github.com/khulnasoft/reconpoint/security/advisories/GHSA-96q4-fj2m-jqf7">https://github.com/khulnasoft/reconpoint/security/advisories/GHSA-96q4-fj2m-jqf7</a></li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>remove redundant docker environment variables by @jxdv in <a href="https://github.com/khulnasoft/reconpoint/pull/1353">https://github.com/khulnasoft/reconpoint/pull/1353</a></li>
+<li>fix: reconPoint installation issue due to orjson and langchain #1362 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1363">https://github.com/khulnasoft/reconpoint/pull/1363</a></li>
+<li>
+<h1 id="1364-fix-whois-lookup-and-improve-performance-by-executing-various-modules-of-whois-lookup-to-run-concurrently-by-khulnasoft-in-httpsgithubcomkhulnasoftreconpointpull1368">1364 FIx whois lookup and improve performance by executing various modules of whois lookup to run concurrently by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1368">https://github.com/khulnasoft/reconpoint/pull/1368</a></h1>
+</li>
+<li>chores: Add error handling for the curl command by @gitworkflows in <a href="https://github.com/khulnasoft/reconpoint/pull/1367">https://github.com/khulnasoft/reconpoint/pull/1367</a></li>
+<li>Update Github Actions Workflows by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1369">https://github.com/khulnasoft/reconpoint/pull/1369</a></li>
+<li>chores: Fix docker build on master by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1373">https://github.com/khulnasoft/reconpoint/pull/1373</a></li>
+</ul>
+<h4 id="new-contributors">New Contributors</h4>
+<ul>
+<li>@gitworkflows made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1367">https://github.com/khulnasoft/reconpoint/pull/1367</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.1.2...v2.1.3">https://github.com/khulnasoft/reconpoint/compare/v2.1.2...v2.1.3</a></p>
+<h2 id="212">2.1.2</h2>
+<p><strong>Release Date: July 30, 2024</strong></p>
+<h2 id="whats-changed_2">What's Changed</h2>
+<h3 id="security-update_1">Security update</h3>
+<ul>
+<li>(Security) CVE-2023-50094 Fix Authenticated command injection in WAF detection tool reported by @n-thumann Advisory <a href="https://github.com/khulnasoft/reconpoint/security/advisories/GHSA-fx7f-f735-vgh4">https://github.com/khulnasoft/reconpoint/security/advisories/GHSA-fx7f-f735-vgh4</a></li>
+</ul>
+<h3 id="bug-fixes_1">Bug Fixes</h3>
+<ul>
+<li>Fix issue while initiating periodic and clocked scan #1322 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1328">https://github.com/khulnasoft/reconpoint/pull/1328</a></li>
+<li>Fix 500 error on "Test Hackerone api Key" by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1332">https://github.com/khulnasoft/reconpoint/pull/1332</a></li>
+<li>UI Typos and bug Fixes #1333 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1334">https://github.com/khulnasoft/reconpoint/pull/1334</a></li>
+<li>Fix error during tool update Fixes #1152 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1335">https://github.com/khulnasoft/reconpoint/pull/1335</a></li>
+<li>Upgrade setuptools to 72.1.0 to resolve installation error by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1338">https://github.com/khulnasoft/reconpoint/pull/1338</a></li>
+<li>(chores) Fix github pages build by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1339">https://github.com/khulnasoft/reconpoint/pull/1339</a></li>
+<li>Fix subdomain import for subdomains with suffixes more than 4 chars Fixes #1128 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1340">https://github.com/khulnasoft/reconpoint/pull/1340</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.1.1...v2.1.2">https://github.com/khulnasoft/reconpoint/compare/v2.1.1...v2.1.2</a></p>
+<h2 id="211">2.1.1</h2>
+<p><strong>Release Date: July 20, 2024</strong></p>
+<h2 id="whats-changed-and-fixed">What's Changed and Fixed</h2>
+<ul>
+<li>Update contribution guidelines reference by @emmanuel-ferdman in <a href="https://github.com/khulnasoft/reconpoint/pull/1286">https://github.com/khulnasoft/reconpoint/pull/1286</a></li>
+<li>fix xss on page title fix #1185 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1296">https://github.com/khulnasoft/reconpoint/pull/1296</a></li>
+<li>fix context key error #1263 #1209 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1294">https://github.com/khulnasoft/reconpoint/pull/1294</a></li>
+<li>fix xss on vulnerability description payloads #1262 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1298">https://github.com/khulnasoft/reconpoint/pull/1298</a></li>
+<li>(bug) fix screenshot csv parser #1299 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1300">https://github.com/khulnasoft/reconpoint/pull/1300</a></li>
+<li>(Security) Fixes #1202 bug risk of leaking the scan result files by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1301">https://github.com/khulnasoft/reconpoint/pull/1301</a></li>
+<li>Fix #1291 Refactor Makefiles for windows/linux to accomodate both v1 and v2 of docker compose by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1302">https://github.com/khulnasoft/reconpoint/pull/1302</a></li>
+<li>Fix custom_header to accept multiple headers using custom_headers by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1303">https://github.com/khulnasoft/reconpoint/pull/1303</a></li>
+<li>Handle hash in url, added navigation for Tabs, Fixes #1155 bug href link with html id does not link to the expected url by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1306">https://github.com/khulnasoft/reconpoint/pull/1306</a></li>
+<li>Optimize uninstall scripts to perform operations only related to reconPoint Fixes # 1187 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1307">https://github.com/khulnasoft/reconpoint/pull/1307</a></li>
+<li>Added validators to validate URL fixes #1176 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1308">https://github.com/khulnasoft/reconpoint/pull/1308</a></li>
+<li>Fix LLM/langchain issue for fetching vulnerability report using local LLM model Fixed #1292 local model dont use fetch gpt vulnerability details by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1311">https://github.com/khulnasoft/reconpoint/pull/1311</a></li>
+<li>Fixes for Clocked and Periodic Scans Fix #1287 Fixes #1015 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1313">https://github.com/khulnasoft/reconpoint/pull/1313</a></li>
+<li>Fix Not able to add todo from All Subdomains Section Fixes #1310 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1314">https://github.com/khulnasoft/reconpoint/pull/1314</a></li>
+<li>Fix #1315 Fix for todo URLs not compatible with slugs by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1316">https://github.com/khulnasoft/reconpoint/pull/1316</a></li>
+<li>Fixes #1122 But in port service lookup that caused multiple entries of Port with same port number but different service name/description by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1317">https://github.com/khulnasoft/reconpoint/pull/1317</a></li>
+</ul>
+<h4 id="new-contributors_1">New Contributors</h4>
+<ul>
+<li>@emmanuel-ferdman made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1286">https://github.com/khulnasoft/reconpoint/pull/1286</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.1.0...v2.1.1">https://github.com/khulnasoft/reconpoint/compare/v2.1.0...v2.1.1</a></p>
+<h2 id="210">2.1.0</h2>
+<p><strong>Release Date: June 22, 2024</strong></p>
+<h2 id="whats-changed_3">What's Changed</h2>
+<ul>
+<li>ARM support</li>
+<li>Add LLM Toolkit by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1259">https://github.com/khulnasoft/reconpoint/pull/1259</a></li>
+<li>use django-env by @fopina in <a href="https://github.com/khulnasoft/reconpoint/pull/1230">https://github.com/khulnasoft/reconpoint/pull/1230</a></li>
+<li>Add Lark to notifications. by @iuime in <a href="https://github.com/khulnasoft/reconpoint/pull/1137">https://github.com/khulnasoft/reconpoint/pull/1137</a></li>
+<li>Added restart: always to redis container by @null-ref-0000 in <a href="https://github.com/khulnasoft/reconpoint/pull/1275">https://github.com/khulnasoft/reconpoint/pull/1275</a></li>
+<li>Dockerfile cleanup: reduce image size 3x by @sa7mon in <a href="https://github.com/khulnasoft/reconpoint/pull/1212">https://github.com/khulnasoft/reconpoint/pull/1212</a></li>
+<li>Support for ARM-based platforms and remove obsolete composer version by @metehan-arslan in <a href="https://github.com/khulnasoft/reconpoint/pull/1242">https://github.com/khulnasoft/reconpoint/pull/1242</a></li>
+<li>Fix importing CIDR blocks by @pbehnke in <a href="https://github.com/khulnasoft/reconpoint/pull/1205">https://github.com/khulnasoft/reconpoint/pull/1205</a></li>
+<li>Added SAN extension to the generated certs by @michschl in <a href="https://github.com/khulnasoft/reconpoint/pull/1282">https://github.com/khulnasoft/reconpoint/pull/1282</a></li>
+<li>Release/2.1.0 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1147">https://github.com/khulnasoft/reconpoint/pull/1147</a></li>
+<li>Dockerfile Build Multiple Platforms by @vncloudsco in <a href="https://github.com/khulnasoft/reconpoint/pull/1210">https://github.com/khulnasoft/reconpoint/pull/1210</a></li>
+</ul>
+<h4 id="new-contributors_2">New Contributors</h4>
+<ul>
+<li>@fopina made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1230">https://github.com/khulnasoft/reconpoint/pull/1230</a></li>
+<li>@iuime made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1137">https://github.com/khulnasoft/reconpoint/pull/1137</a></li>
+<li>@null-ref-0000 made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1275">https://github.com/khulnasoft/reconpoint/pull/1275</a></li>
+<li>@sa7mon made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1212">https://github.com/khulnasoft/reconpoint/pull/1212</a></li>
+<li>@metehan-arslan made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1242">https://github.com/khulnasoft/reconpoint/pull/1242</a></li>
+<li>@pbehnke made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1205">https://github.com/khulnasoft/reconpoint/pull/1205</a></li>
+<li>@michschl made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1282">https://github.com/khulnasoft/reconpoint/pull/1282</a></li>
+<li>@vncloudsco made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1210">https://github.com/khulnasoft/reconpoint/pull/1210</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.0.6...v2.1.0">https://github.com/khulnasoft/reconpoint/compare/v2.0.6...v2.1.0</a></p>
+<h2 id="206">2.0.6</h2>
+<p><strong>Release Date: May 11, 2024</strong></p>
+<h2 id="whats-changed_4">What's Changed</h2>
+<ul>
+<li>Fix installation error and celery workers having issues with httpcore</li>
+<li>remove duplicate gospider references by @Talanor in <a href="https://github.com/khulnasoft/reconpoint/pull/1245">https://github.com/khulnasoft/reconpoint/pull/1245</a></li>
+<li>Fix "subdomain" s3 bucket by @Talanor in <a href="https://github.com/khulnasoft/reconpoint/pull/1244">https://github.com/khulnasoft/reconpoint/pull/1244</a></li>
+<li>Fix Txt File Var Declaration by @specters312 in <a href="https://github.com/khulnasoft/reconpoint/pull/1239">https://github.com/khulnasoft/reconpoint/pull/1239</a></li>
+<li>Bug Correction: When dumping and loading customscanengines by @TH3xACE in <a href="https://github.com/khulnasoft/reconpoint/pull/1224">https://github.com/khulnasoft/reconpoint/pull/1224</a></li>
+<li>Fix/infoga removal by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1249">https://github.com/khulnasoft/reconpoint/pull/1249</a></li>
+<li>Fix #1241 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1251">https://github.com/khulnasoft/reconpoint/pull/1251</a></li>
+</ul>
+<h4 id="new-contributors_3">New Contributors</h4>
+<ul>
+<li>@Talanor made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1245">https://github.com/khulnasoft/reconpoint/pull/1245</a></li>
+<li>@specters312 made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1239">https://github.com/khulnasoft/reconpoint/pull/1239</a></li>
+<li>@TH3xACE made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1224">https://github.com/khulnasoft/reconpoint/pull/1224</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.0.5...v2.0.6">https://github.com/khulnasoft/reconpoint/compare/v2.0.5...v2.0.6</a></p>
+<h2 id="205">2.0.5</h2>
+<p><strong>Release Date: April 20, 2024</strong></p>
+<ul>
+<li>Fix #1234 reconPoint unable to load celery tasks due to mismatched celery and redis versions</li>
+</ul>
+<h2 id="204">2.0.4</h2>
+<p><strong>Release Date: April 18, 2024</strong></p>
+<h2 id="whats-changed_5">What's Changed</h2>
+<ul>
+<li>chore: update version number to 2.0.3 by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1180">https://github.com/khulnasoft/reconpoint/pull/1180</a></li>
+<li>Fix various ffuf bugs by @yarysp in <a href="https://github.com/khulnasoft/reconpoint/pull/1199">https://github.com/khulnasoft/reconpoint/pull/1199</a></li>
+<li>Set and update default YAML config with all latest vars by @yarysp in <a href="https://github.com/khulnasoft/reconpoint/pull/1200">https://github.com/khulnasoft/reconpoint/pull/1200</a></li>
+<li>Add checks for placeholder in custom tool task by @yarysp in <a href="https://github.com/khulnasoft/reconpoint/pull/1201">https://github.com/khulnasoft/reconpoint/pull/1201</a></li>
+<li>Whatportis - Replace purge by truncate to prevent port import error by @yarysp in <a href="https://github.com/khulnasoft/reconpoint/pull/1203">https://github.com/khulnasoft/reconpoint/pull/1203</a></li>
+<li>ops(installation): fix nano not being installed when absent by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1143">https://github.com/khulnasoft/reconpoint/pull/1143</a></li>
+<li>Complete dev environment to debug/code easily by @yarysp in <a href="https://github.com/khulnasoft/reconpoint/pull/1196">https://github.com/khulnasoft/reconpoint/pull/1196</a></li>
+<li>Revert "Complete dev environment to debug/code easily" by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1225">https://github.com/khulnasoft/reconpoint/pull/1225</a></li>
+<li>Update README.md | Fixed 1 broken link to the regine.wiki by @jostasik in <a href="https://github.com/khulnasoft/reconpoint/pull/1226">https://github.com/khulnasoft/reconpoint/pull/1226</a></li>
+<li>Fix uninitialised variable cmd in custom_subdomain_tools by @cpandya2909 in <a href="https://github.com/khulnasoft/reconpoint/pull/1207">https://github.com/khulnasoft/reconpoint/pull/1207</a></li>
+<li>[FIX] security: OS Command Injection vulnerability (x2) #1219 by @0xtejas in <a href="https://github.com/khulnasoft/reconpoint/pull/1227">https://github.com/khulnasoft/reconpoint/pull/1227</a></li>
+</ul>
+<h3 id="new-contributors_4">New Contributors <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f680.svg" title=":rocket:"/></h3>
+<ul>
+<li>@yarysp made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1199">https://github.com/khulnasoft/reconpoint/pull/1199</a></li>
+<li>@jostasik made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1226">https://github.com/khulnasoft/reconpoint/pull/1226</a></li>
+<li>@cpandya2909 made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1207">https://github.com/khulnasoft/reconpoint/pull/1207</a></li>
+<li>@0xtejas made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1227">https://github.com/khulnasoft/reconpoint/pull/1227</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.0.3...v2.0.4">https://github.com/khulnasoft/reconpoint/compare/v2.0.3...v2.0.4</a></p>
+<h2 id="203">2.0.3</h2>
+<p><strong>Release Date: January 25, 2024</strong></p>
+<h2 id="whats-changed_6">What's Changed</h2>
+<ul>
+<li>CI: update GitHub action versions by @jxdv in <a href="https://github.com/khulnasoft/reconpoint/pull/1136">https://github.com/khulnasoft/reconpoint/pull/1136</a></li>
+<li>Fixed (subdomain_discovery | ERROR | local variable 'use_amass_config' referenced before assignment) by @Deathpoolxrs in <a href="https://github.com/khulnasoft/reconpoint/pull/1149">https://github.com/khulnasoft/reconpoint/pull/1149</a></li>
+<li>chore: update LICENSE by @jxdv in <a href="https://github.com/khulnasoft/reconpoint/pull/1153">https://github.com/khulnasoft/reconpoint/pull/1153</a></li>
+<li>Fix subdomains list empty in Target by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1166">https://github.com/khulnasoft/reconpoint/pull/1166</a></li>
+<li>Fix top menu text overflow in low resolution by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1167">https://github.com/khulnasoft/reconpoint/pull/1167</a></li>
+<li>Update auto comment workflow due to deprecation warnings by @ErdemOzgen in <a href="https://github.com/khulnasoft/reconpoint/pull/1126">https://github.com/khulnasoft/reconpoint/pull/1126</a></li>
+<li>Change Redirect URL after login to prevent 500 error by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1124">https://github.com/khulnasoft/reconpoint/pull/1124</a></li>
+<li>fix-1030: Add missing slug on target summary link by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1123">https://github.com/khulnasoft/reconpoint/pull/1123</a></li>
+</ul>
+<h3 id="new-contributors_5">New Contributors</h3>
+<ul>
+<li>@Deathpoolxrs made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1149">https://github.com/khulnasoft/reconpoint/pull/1149</a></li>
+<li>@ErdemOzgen made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1126">https://github.com/khulnasoft/reconpoint/pull/1126</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.0.2...v2.0.3">https://github.com/khulnasoft/reconpoint/compare/v2.0.2...v2.0.3</a></p>
+<h2 id="202">2.0.2</h2>
+<p><strong>Release Date: December 8, 2023</strong></p>
+<h2 id="whats-changed_7">What's Changed</h2>
+<ul>
+<li>Added tooltip text to dashboard total vulnerabilities tooltip by @luizmlo in <a href="https://github.com/khulnasoft/reconpoint/pull/1029">https://github.com/khulnasoft/reconpoint/pull/1029</a></li>
+<li>ops(<code>uninstall.sh</code>): add missing volumes and echo messages by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/977">https://github.com/khulnasoft/reconpoint/pull/977</a></li>
+<li>Fix no results in target subdomain list by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1036">https://github.com/khulnasoft/reconpoint/pull/1036</a></li>
+<li>Fix Tool Settings Broken Link by @aqhmal in <a href="https://github.com/khulnasoft/reconpoint/pull/1021">https://github.com/khulnasoft/reconpoint/pull/1021</a></li>
+<li>Fix subdomains list empty in Target by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1053">https://github.com/khulnasoft/reconpoint/pull/1053</a></li>
+<li>Raise page limit to 500 for popup list by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1051">https://github.com/khulnasoft/reconpoint/pull/1051</a></li>
+<li>Add directories count on Directories list by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1050">https://github.com/khulnasoft/reconpoint/pull/1050</a></li>
+<li>ops(docker-compose): upgrade to 2.23.0 by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1023">https://github.com/khulnasoft/reconpoint/pull/1023</a></li>
+<li>Fix endpoints list and count by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1041">https://github.com/khulnasoft/reconpoint/pull/1041</a></li>
+<li>Fix failing visualization when dorks are present by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1045">https://github.com/khulnasoft/reconpoint/pull/1045</a></li>
+<li>Fix note not saving by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1047">https://github.com/khulnasoft/reconpoint/pull/1047</a></li>
+<li>Count only not done todos in subdomains list by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1048">https://github.com/khulnasoft/reconpoint/pull/1048</a></li>
+<li>Fix user agent definition keyword by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1054">https://github.com/khulnasoft/reconpoint/pull/1054</a></li>
+<li>Upgrade project discovery tool at CT build by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1055">https://github.com/khulnasoft/reconpoint/pull/1055</a></li>
+<li>Add a check to not load datatables twice by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1039">https://github.com/khulnasoft/reconpoint/pull/1039</a></li>
+<li>Nmap port scan fails when Naabu return no port by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1067">https://github.com/khulnasoft/reconpoint/pull/1067</a></li>
+<li>chore(issue-templates): incorrect label name by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1066">https://github.com/khulnasoft/reconpoint/pull/1066</a></li>
+<li>Endpoints list popup empty by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1070">https://github.com/khulnasoft/reconpoint/pull/1070</a></li>
+<li>Add missing domain id value in subscan by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1069">https://github.com/khulnasoft/reconpoint/pull/1069</a></li>
+<li>Fixes for #1033, #1026, #1027 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1071">https://github.com/khulnasoft/reconpoint/pull/1071</a></li>
+<li>Temporary fix to prevent celery beat crash by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1072">https://github.com/khulnasoft/reconpoint/pull/1072</a></li>
+<li>fix: ffuf ANSI code processing preventing task to finish by @ocervell in <a href="https://github.com/khulnasoft/reconpoint/pull/1058">https://github.com/khulnasoft/reconpoint/pull/1058</a></li>
+<li>Update views.py by @Vijayragha1 in <a href="https://github.com/khulnasoft/reconpoint/pull/1074">https://github.com/khulnasoft/reconpoint/pull/1074</a></li>
+<li>Fix crash on saving endpoint (FFUF related only) by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1063">https://github.com/khulnasoft/reconpoint/pull/1063</a></li>
+<li>chore(issue-templates): fix incorrect description by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1078">https://github.com/khulnasoft/reconpoint/pull/1078</a></li>
+<li>IOError -&gt; OSError by @jxdv in <a href="https://github.com/khulnasoft/reconpoint/pull/1081">https://github.com/khulnasoft/reconpoint/pull/1081</a></li>
+<li>Add directories count on Directories list by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1090">https://github.com/khulnasoft/reconpoint/pull/1090</a></li>
+<li>chore(issue-template): don't allow blank issues by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1089">https://github.com/khulnasoft/reconpoint/pull/1089</a></li>
+<li>Fix bad nuclei config name by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1098">https://github.com/khulnasoft/reconpoint/pull/1098</a></li>
+<li>disallow empty password by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1105">https://github.com/khulnasoft/reconpoint/pull/1105</a></li>
+<li>fix attribute error on scan history #1103 by @khulnasoft in <a href="https://github.com/khulnasoft/reconpoint/pull/1104">https://github.com/khulnasoft/reconpoint/pull/1104</a></li>
+<li>issue-633: added already-in-org filter to target dropdown in org form by @SeanOverton in <a href="https://github.com/khulnasoft/reconpoint/pull/1106">https://github.com/khulnasoft/reconpoint/pull/1106</a></li>
+<li>Update Dockerfile to fix silicon incompatability by @SubGlitch1 in <a href="https://github.com/khulnasoft/reconpoint/pull/1107">https://github.com/khulnasoft/reconpoint/pull/1107</a></li>
+<li>Add source for nmap scan by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1108">https://github.com/khulnasoft/reconpoint/pull/1108</a></li>
+<li>Spelling mistake in hackerone.html by @Linuxinet in <a href="https://github.com/khulnasoft/reconpoint/pull/1112">https://github.com/khulnasoft/reconpoint/pull/1112</a></li>
+<li>fix(version): incorrect number in art by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1111">https://github.com/khulnasoft/reconpoint/pull/1111</a></li>
+<li>Fix report generation when <code>Ignore Informational Vulnerabilities</code> checked by @psyray in <a href="https://github.com/khulnasoft/reconpoint/pull/1100">https://github.com/khulnasoft/reconpoint/pull/1100</a></li>
+<li>fix(tool_arsenal): incorrect regex version numbers by @AnonymousWP in <a href="https://github.com/khulnasoft/reconpoint/pull/1086">https://github.com/khulnasoft/reconpoint/pull/1086</a></li>
+</ul>
+<h3 id="new-contributors_6">New Contributors</h3>
+<ul>
+<li>@luizmlo made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1029">https://github.com/khulnasoft/reconpoint/pull/1029</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@aqhmal made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1021">https://github.com/khulnasoft/reconpoint/pull/1021</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@C0wnuts made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/973">https://github.com/khulnasoft/reconpoint/pull/973</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@ocervell made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1058">https://github.com/khulnasoft/reconpoint/pull/1058</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@Vijayragha1 made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1074">https://github.com/khulnasoft/reconpoint/pull/1074</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@jxdv made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1081">https://github.com/khulnasoft/reconpoint/pull/1081</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@SeanOverton made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1106">https://github.com/khulnasoft/reconpoint/pull/1106</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@SubGlitch1 made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1107">https://github.com/khulnasoft/reconpoint/pull/1107</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+<li>@Linuxinet made their first contribution in <a href="https://github.com/khulnasoft/reconpoint/pull/1112">https://github.com/khulnasoft/reconpoint/pull/1112</a> <img alt="🥳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f973.svg" title=":partying_face:"/></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/khulnasoft/reconpoint/compare/v2.0.1...v2.0.2">https://github.com/khulnasoft/reconpoint/compare/v2.0.1...v2.0.2</a></p>
+<p>Once again excellent work on reconPoint v2.0.2 by @AnonymousWP, @psyray, @ocervell and everybody else! <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f680.svg" title=":rocket:"/></p>
+<h2 id="201">2.0.1</h2>
+<p><strong>Release Date: October 24, 2023</strong></p>
+<p>2.0.1 fixes a ton of issues in reconPoint 2.0.</p>
+<p>Fixes:</p>
+<ol>
+<li>Prevent duplicating Nuclei vulns for subdomain #1012 @psyray</li>
+<li>Fixes for empty subdomain returned during nuclei scan #1011 @psyray</li>
+<li>Add all the missing slug in scanEngine view &amp; other places #1005 @psyray</li>
+<li>Foxes for missing vulscan script #1004 @psyray</li>
+<li>Fixes for missing slug in report settings saving #1003</li>
+<li>Fixes for Nmap Parsing Error #1001 #1002 @psyray</li>
+<li>Fix nmap script ports iterable args #1000 @psyray</li>
+<li>Iterate over hostnames when multiple #1002 @psyray</li>
+<li>Gau install #998, change gauplus to gau @psyray</li>
+<li>Add missing slug parameter in schedule scan #996 @psyray</li>
+<li>Add missing slug parameter in schedule scan #996, fixes #940, #937, #897, #764 @psyray</li>
+<li>Add stack trace into make logs if DEBUG True #994 @psyray</li>
+<li>Fix dirfuzz base64 name display #993 #992 @psyray</li>
+<li>Fix target subdomains list not loading #991 @psyray</li>
+<li>Change WORDLIST constant value #987, fixes #986@psyray</li>
+<li>fix(notification_settings): submitting results in error 502 #981 fixes #970 @psyray</li>
+<li>Fixes with documentation and installation/update/uninstall scripts @anonymousWP</li>
+<li>Fix file directory popup not showing in detailed scan #912 @psyray</li>
+</ol>
+<p>@AnonymousWP and @psyray have been phenomenal in fixing these bugs. Thanks to both of you! <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:"/> <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f680.svg" title=":rocket:"/></p>
+<h2 id="200">2.0.0</h2>
+<p><strong>Release Date: October 7, 2023</strong></p>
+<h3 id="added">Added</h3>
+<ul>
+<li>Projects: Projects allow you to efficiently organize their web application reconnaissance efforts. With this feature, you can create distinct project spaces, each tailored to a specific purpose, such as personal bug bounty hunting, client engagements, or any other specialized recon task.</li>
+<li>Roles and Permissions: assign distinct roles to your team members: Sys Admin, Penetration Tester, and Auditor—each with precisely defined permissions to tailor their access and actions within the reconPoint ecosystem.</li>
+<li>GPT-powered Report Generation: With the power of OpenAI's GPT, reconPoint now provides you with detailed vulnerability descriptions, remediation strategies, and impact assessments.</li>
+<li>API Vault: This feature allows you to organize your API keys such as OpenAI or Netlas API keys.</li>
+<li>GPT-powered Attack Surface Generation</li>
+<li>URL gathering now is much more efficient, removing duplicate endpoints based on similar HTTP Responses, having the same content_lenth, or page_title. Custom duplicate fields can also be set from the scan engine configuration.</li>
+<li>URL Path filtering while initiating scan: For instance, if we want to scan only endpoints starting with <a href="https://example.com/start/">https://example.com/start/</a>, we can pass the /start as a path filter while starting the scan. <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Expanding Target Concept: reconPoint 2.0 now accepts IPs, URLS, etc as targets. (#678, #658) Excellent work by <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>A ton of refactoring on reconPoint's core to improve scan efficiency. Massive kudos to <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Created a custom celery workflow to be able to run several tasks in parallel that are not dependent on each other, such OSINT task and subdomain discovery will run in parallel, and directory and file fuzzing, vulnerability scan, screenshot gathering etc. will run in parallel after port scan or url fetching is completed. This will increase the efficiency of scans and instead of having one long flow of tasks, they can run independently on their own. <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Refactored all tasks to run asynchronously <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Added a stream_command that allows to read the output of a command live: this means the UI is updated with results while the command runs and does not have to wait until the task completes. Excellent work by <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Pwndb is now replaced by h8mail. <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Group Scan Results: reconPoint 2.0 allows to group of subdomains based on similar page titles and HTTP status, and also vulnerability grouping based on the same vulnerability title and severity.</li>
+<li>Added Support for Nmap: reconPoint 2.0 allows to run Nmap scripts and vuln scans on ports found by Naabu. <a href="https://github.com/ocervell">@ocervell</a></li>
+<li>Added support for Shared Scan Variables in Scan Engine Configuration:<ul>
+<li><code>enable_http_crawl</code>: (true/false) You can disable it to be more stealthy or focus on something different than HTTP</li>
+<li><code>timeout</code>: set timeout for all tasks</li>
+<li><code>rate_limit</code>: set rate limit for all tasks</li>
+<li><code>retries</code>: set retries for all tasks</li>
+<li><code>custom_header</code>: set the custom header for all tasks</li>
+</ul>
+</li>
+<li>Added Dalfox for XSS Vulnerability Scan</li>
+<li>Added CRLFuzz for CRLF Vulnerability Scan</li>
+<li>Added S3Scanner for scanning misconfigured S3 buckets</li>
+<li>Improve OSINT Dork results, now detects admin panels, login pages and dashboards</li>
+<li>Added Custom Dorks</li>
+<li>Improved UI for vulnerability results, clicking on each vulnerability will open up a sidebar with vulnerability details.</li>
+<li>Added HTTP Request and Response in vulnerability Results</li>
+<li>Under Admin Settings, added an option to allow add/remove/deactivate additional users</li>
+<li>Added Option to Preview Scan Report instead of forcing to download</li>
+<li>Added Katana for crawling and spidering URLs</li>
+<li>Added Netlas for Whois and subdomain gathering</li>
+<li>Added TLSX for subdomain gathering</li>
+<li>Added CTFR for subdomain gathering</li>
+<li>Added historical IP in whois section</li>
+<li>Added Pagination on Large datatables such as subdomains, endpoints, vulnerabilities etc #949 <a href="https://github.com/psyray">@psyray</a></li>
+</ul>
+<h3 id="fixes">Fixes</h3>
+<ul>
+<li>GF patterns do not run on 404 endpoints (#574 closed)</li>
+<li>Fixes for retrieving whois data (#693 closed)</li>
+<li>Related/Associated Domains in Whois section is now fixed</li>
+<li>Fixed missing lightbox css &amp; js on target screenshot page #947 #948 <a href="https://github.com/psyray">@psyray</a></li>
+<li>Issue in Port-scan: int object is not subscriptable Fixed #939, #938 <a href="https://github.com/AnonymousWP">@AnonymousWP</a></li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Removed pwndb and tor related to it.</li>
+<li>Removed tor for pwndb</li>
+</ul>
+<h2 id="136">1.3.6</h2>
+<p><strong>Release Date: March 2, 2023</strong></p>
+<ul>
+<li>Fixed installation errors. Fixed #824, #823, #816, #809, #803, #801, #798, #797, #794, #791 .</li>
+</ul>
+<h2 id="135">1.3.5</h2>
+<p><strong>Release Date: December 29, 2022</strong></p>
+<ul>
+<li>Fixed #769, #768, #766, #761, Thanks to, @bin-maker, @carsonchan12345, @paweloque, @opabravo</li>
+</ul>
+<h2 id="134">1.3.4</h2>
+<p><strong>Release Date: November 16, 2022</strong></p>
+<h3 id="fixes_1">Fixes</h3>
+<ul>
+<li>Fixed #748 , #743 , #738, #739</li>
+</ul>
+<h2 id="133">1.3.3</h2>
+<p><strong>Release Date: October 9, 2022</strong></p>
+<h3 id="fixes_2">Fixes</h3>
+<ul>
+<li>
+<h1 id="723-upgraded-go-to-1182">723, Upgraded Go to 1.18.2</h1>
+</li>
+</ul>
+<h2 id="132">1.3.2</h2>
+<p><strong>Release Date: August 20, 2022</strong></p>
+<h3 id="fixes_3">Fixes</h3>
+<ul>
+<li>
+<h1 id="683-for-filtering-gf-tags">683 For Filtering GF tags</h1>
+</li>
+<li>
+<h1 id="669-where-directory-ui-had-to-be-collapsed">669 Where Directory UI had to be collapsed</h1>
+</li>
+</ul>
+<h2 id="131">1.3.1</h2>
+<p><strong>Release Date: August 12, 2022</strong></p>
+<h3 id="fixes_4">Fixes</h3>
+<ul>
+<li>Fix for #643 Downloading issue for Subdomain and Endpoints</li>
+<li>Fix for #627 Too many Targets causes issues while loading datatable</li>
+<li>Fix version Numbering issue</li>
+</ul>
+<h2 id="130">1.3.0</h2>
+<p><strong>Release Date: July 11, 2022</strong></p>
+<h3 id="added_1">Added</h3>
+<ul>
+<li>Geographic Distribution of Assets Map</li>
+<li>Added WAF Detector as an optional tool in Scan Engine</li>
+</ul>
+<h3 id="fixes_5">Fixes</h3>
+<ul>
+<li>WHOIS Provider Changed</li>
+<li>Fixed Dark UI Issues</li>
+<li>Fix HTTPX Issue with custom Header</li>
+</ul>
+<h2 id="120">1.2.0</h2>
+<p><strong>Release Date: May 27, 2022</strong></p>
+<h3 id="added_2">Added</h3>
+<ul>
+<li>Naabu Exclude CDN Port Scanning</li>
+<li>Added WAF Detection</li>
+</ul>
+<h3 id="fixes_6">Fixes</h3>
+<ul>
+<li>Fix #630 Character Name too Long Issue</li>
+<li>[Security] Fixed several instances of Command Injections, CVE-2022-28995, CVE-2022-1813</li>
+<li>Hakrawler Fixed - #623</li>
+<li>Fixed XSS on Hackerone report via Markdown</li>
+<li>Fixed XSS on Import Target using malicious filename</li>
+<li>Stop Scan Fixed #561</li>
+<li>Fix installation issue due to missing curl</li>
+<li>Updated docker-compose version</li>
+</ul>
+<h2 id="110">🏷️ 1.1.0</h2>
+<p><strong>Release Date: Apr 24, 2022</strong></p>
+<ul>
+<li>Redeigned UI</li>
+<li>
+<p>Added Subscan Feature</p>
+<p>Subscan allows further scanning any subdomains. Assume from a normal recon process you identified a subdomain that you wish to do port scan. Earlier, you had to add that subdomain as a target. Now you can just select the subdomain and initiate subscan.</p>
+</li>
+</ul>
+<ul>
+<li>Ability to Download reconnaissance or vulnerability report</li>
+<li>Added option to customize report, customization includes the look and feel of report, executive summary etc.</li>
+</ul>
+<ul>
+<li>Add IP Address from IP</li>
+<li>WHOIS Addition on Detail Scan and fetch whois automatically on Adding Single Targets</li>
+<li>Universal Search Box</li>
+<li>Addition of Quick Add menus</li>
+<li>
+<p>Added ToolBox Feature</p>
+<p>ToolBox will feature most commonly used recon tools. One can use these tools to identify whois, CMSDetection etc without adding targets. Currently, Whois, CMSDetector and CVE ID lookup is supported. More tools to follow up.</p>
+</li>
+</ul>
+<ul>
+<li>Notify New Releases on reconPoint if available</li>
+<li>Tools Arsenal Section to feature preinstalled and custom tools</li>
+<li>Ability to Update preinstalled tools from Tools Arsenal Section</li>
+<li>Ability to download/add custom tools</li>
+<li>Added option for Custom Header on Scan Engine</li>
+<li>Added CVE_ID, CWE_ID, CVSS Score, CVSS Metrics on Vulnerability Section, this also includes lookup using cve_id, cwe_id, cvss_score etc</li>
+<li>Added curl command and references on Vulnerability Section</li>
+<li>Added Columns Filtering Option on Subdomain, Vulnerability and Endpoints Tables</li>
+<li>Added Error Handling for Failed Scans, reason for failure scan will be displayed</li>
+<li>Added Related Domains using WHOIS</li>
+<li>Added Related TLDs</li>
+<li>Added HTTP Status Breakdown Widget</li>
+<li>Added CMS Detector</li>
+<li>Updated Visualization</li>
+<li>Option to Download Selected Subdomains</li>
+<li>Added additional Nuclei Templates from <a href="https://github.com/geeknik/the-nuclei-templates">https://github.com/geeknik/the-nuclei-templates</a></li>
+<li>Added SSRF check from Nagli Nuclei Template</li>
+<li>Added option to fetch CVE_ID details</li>
+<li>Added option to Delete Multiple Scans</li>
+<li>Added ffuf as Directory and Files fuzzer</li>
+<li>Added widgets such as Most vulnerable Targets, Most Common Vulnerabilities, Most Common CVE IDs, Most Common CWE IDs, Most Common Vulnerability Tags</li>
+</ul>
+<p>And more...</p>
+<h2 id="101">🏷️ 1.0.1</h2>
+<p><strong>Release Date: Aug 29, 2021</strong></p>
+<p><strong>Changelog</strong></p>
+<ul>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/482">#482</a> Endpoints and Vulnerability Datatable were showing results of other targets due to the scan_id parameter</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/479">#479</a> where the scan was failing due to recent httpx release, change was in the JSON output</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/476">#476</a> where users were unable to click on Clocked Scan (Reported only on Firefox)</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/442">#442</a> where an extra slash was added in Directory URLs</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/337">#337</a> where users were unable to link custom wordlist</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/436">#436</a> Checkbox in Notification Settings were not working due to same name attribute, now fixed</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/439">#439</a> Hakrawler crashed if the deep mode was activated due to -plain flag</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/437">#437</a> If Out of Scope subdomains were supplied, the scan was failing due to None value</li>
+<li>Fixed <a href="https://github.com/khulnasoft/reconpoint/issues/424">#424</a> Multiple Targets couldn't be scanned</li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul>
+<li>Enhanced install script, check for if docker is running service or not #468
+<strong>Security</strong></li>
+</ul>
+<ul>
+<li>Fixed Cross Site Scripting<ul>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/460">#460</a></li>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/457">#457</a></li>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/454">#454</a></li>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/453">#453</a></li>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/459">#459</a></li>
+<li><a href="https://github.com/khulnasoft/reconpoint/issues/460">#460</a></li>
+</ul>
+</li>
+<li>Fixed Cross Site Scripting reported on Huntr <a href="https://github.com/khulnasoft/reconpoint/issues/478">#478</a>
+<a href="https://www.huntr.dev/bounties/ac07ae2a-1335-4dca-8d55-64adf720bafb/">https://www.huntr.dev/bounties/ac07ae2a-1335-4dca-8d55-64adf720bafb/</a></li>
+</ul>
+<h3 id="verion-10-major-release">Verion 1.0 Major release</h3>
+<h3 id="additions">Additions</h3>
+<ul>
+<li>Dark Mode</li>
+<li>Recon Data visualization</li>
+<li>Improved correlation among recon data</li>
+<li>Ability to identify Interesting Subdomains</li>
+<li>Ability to Automatically report Vulnerabilities to Hackerone with customizable vulnerability report</li>
+<li>Added option to download URLs and Endpoints along with matched GF patterns</li>
+<li>Dorking support for stackoverflow, 3rdparty, social_media, project_management, code_sharing, config_files, jenkins, wordpress_files, cloud_buckets, php_error, exposed_documents, struts_rce, db_files, traefik, git_exposed</li>
+<li>Emails, metainfo, employees, leaked password discovery</li>
+<li>Optin to Add bulk targets</li>
+<li>Proxy Support</li>
+<li>Target Summary</li>
+<li>Recon Todo</li>
+<li>Unusual Port Identification</li>
+<li>GF patterns support #110, #88</li>
+<li>Screenshot Gallery with Filters</li>
+<li>Powerful recon data filtering with auto suggestions</li>
+<li>Added whatportis, this allows ports to be displayed as Service Name and Description</li>
+<li>Recon Data changes, finds new/removed subdomains/endpoints</li>
+<li>Tagging of targets into Organization</li>
+<li>Added option to delete all scan results or delete all screenshots inside Settings and reconPoint settings</li>
+<li>Support for custom GF patterns and Nuclei Templates</li>
+<li>Support for editing tool related configuration files (Nuclei, Subfinder, Naabu, amass)</li>
+<li>Option to Mark Subdomains as important</li>
+<li>Separate tab for Directory scan results</li>
+<li>Option to Import Subdomains</li>
+<li>Clean your scan results and screenshots</li>
+<li>Enhanced and Customizable Scan alert with support for sending recon data directly to Discord</li>
+<li>Improvement in Vulnerability Scanning, If endpoint scan is performed, those endpoints will be an input to Nuclei.</li>
+<li>Ignore file extensions in URLs</li>
+<li>Added response time in endpoints and subdomains</li>
+<li>Added badge to identify CDN and non CDN IPs</li>
+<li>Added gospider, gauplus and waybackurls for url discovery</li>
+<li>Added activity log in Scan activity</li>
+<li>For better UX shifted nav bar from vertical position to horizontal position on top. This allows better navigation on recon data.</li>
+<li>Separate table for Directory scan results #244</li>
+<li>Scan results UI now in tabs</li>
+<li>Added badge on Subdomain Result table to directly query Vulnerability and Endpoints</li>
+<li>Webserver and content_type badge has been addeed in Subdomain Result table</li>
+<li>Inside Targets list, Recent Scan button has been added to quickly go to the last scan results</li>
+<li>In target summary, timelin of scan has been added</li>
+<li>Randomized user agent in HTTPX</li>
+<li>reconPoint will no longer store any recon data apart from that in Database, this includes sorted_subdomains list.txt or any json file</li>
+<li>aquatone has been replaced with Eyewitness</li>
+<li>Out of Scope subdomains are no longer part of scan engine, they can be imported before initiating the scan</li>
+<li>Added script to uninstall reconPoint</li>
+<li>Added option to filter targets and scans using organization, scan status, etc</li>
+<li>Added random user agent in directory scan</li>
+<li>Added concurrency, rate limit, timeout, retries in Scan Engine YAML</li>
+<li>Added Rescan option</li>
+<li>Other tiny fixes.....</li>
+</ul>
+<h3 id="v053-feb25-2021">V0.5.3 Feb25 2021</h3>
+<ul>
+<li>Build error for Naabu v2 Fixed</li>
+<li>Added rate support for Naabu</li>
+</ul>
+<h3 id="v052-feb-23-2021">V0.5.2 Feb 23 2021</h3>
+<ul>
+<li>Fixed XSS <a href="https://github.com/khulnasoft/reconpoint/issues/347">https://github.com/khulnasoft/reconpoint/issues/347</a></li>
+</ul>
+<h3 id="v051-feb-19-2021">V0.5.1 Feb 19 2021</h3>
+<h3 id="features">Features</h3>
+<ul>
+<li>Added Discord Support for Notification Web hooks</li>
+</ul>
+<h3 id="v05-29-nov-2020">V0.5 29 Nov 2020</h3>
+<h3 id="features_1">Features</h3>
+<ul>
+<li>Nuclei Integration: v0.5 is primarily focused on vulnerability scanner using Nuclei. This was a long pending due and we've finally integrated it.</li>
+</ul>
+<ul>
+<li>Powerful search queries across endpoints, subdomains and vulnerability scan results: reconPoint reconnaissance data can now be queried using operators like &lt;,&gt;,&amp;,| and !, namely greater than, less than, and, or, and not. This is extremely useful in querying the recon data. More details can be found at Instructions to perform Queries on Recon data</li>
+</ul>
+<ul>
+<li>Out of scope options: Many of you have been asking for out of scope option. Thanks to Valerio Brussani for his pull request which made it possible for out of scope options. Please check the documentation on how to define out of scope options.</li>
+</ul>
+<ul>
+<li>Official Documentation(WIP): We often get asked on how to use reconPoint. For long, we had no official documentation. Finally, I've worked on it and we have the official documentation at recon.khulnasoft.com</li>
+</ul>
+<ul>
+<li>The documentation is divided into two parts, for Developers and for Penetration Testers. For developers, it's a work in progress. I will keep you all updated throughout the process.</li>
+</ul>
+<ul>
+<li>Redefined Dashboard: We've also made some changes in the Dashboard. The additions include vulnerability scan results, most vulnerable targets, most common vulnerabilities.</li>
+</ul>
+<ul>
+<li>Global Search: This feature has been one of the most requested features for reconPoint. Now you can search all the subdomains, endpoints, and vulnerabilities.</li>
+</ul>
+<ul>
+<li>OneForAll Support: reconPoint now supports OneForAll for subdomain discovery, it is currently in beta. I am working on how to integrate OneForAll APIKeys and Configuration files.</li>
+</ul>
+<ul>
+<li>Configuration Support for subfinder: You will now have ability to add configurations for subfinder as well.</li>
+</ul>
+<ul>
+<li>Timeout option for aquatone: We added timeout options in yaml configuration as a lot of screenshots were missing. You can now define timeout for http, scan and screenshots for timeout in milliseconds.</li>
+</ul>
+<ul>
+<li>Design Changes A lot of design changes has happened in reconPoint. Some of which are:</li>
+</ul>
+<ul>
+<li>Endpoints Results and Vulnerability Scan Results are now displayed as a separate page, this is to separate the results and decrease the page load time.
+  Checkbox next to Subdomains and Vulnerability report list to change the status, this allows you to mark all subdomains and vulnerabilities that you've already completed working on.</li>
+<li>Sometimes due to timeout, aquatone was skipping the screenshots and due to that, navigations between screenshots was little annoying. We have fixed it as well.
+  Ability to delete multiple targets and initiate multiple scans.</li>
+</ul>
+<h3 id="abandoned">Abandoned</h3>
+<ul>
+<li>Subdomain Takeover: As we decided to use Nuclei for Vulnerability Scanner, and also, since Subjack wasn't giving enough results, I decided to remove Subjack. The subdomain Takeover will now be part of Nuclei Vulnerability Scanner.</li>
+</ul>
+<h3 id="v04-release-2020-10-08">V0.4 Release 2020-10-08</h3>
+<h3 id="features_2">Features</h3>
+<ul>
+<li>Background tasks migrated to Celery and redis</li>
+<li>Periodic and clocked scan added</li>
+<li>Ability to Stop and delete the scan</li>
+<li>CNAME and IP address added on detail scan</li>
+<li>Content type added on Endpoints section</li>
+<li>Ability to initiate multiple scans at a time</li>
+</ul>
+<h3 id="v03-release-2020-07-21">V0.3 Release 2020-07-21</h3>
+<h3 id="features_3">Features</h3>
+<ul>
+<li>YAML based Customization Engine</li>
+<li>Ability to add wordlists</li>
+<li>Login Feature</li>
+</ul>
+<h3 id="v02-release-2020-07-11">V0.2 Release 2020-07-11</h3>
+<h3 id="features_4">Features</h3>
+<ul>
+<li>Directory Search Enabled</li>
+<li>Fetch URLS using hakrawler</li>
+<li>Subdomain takeover using Subjack</li>
+<li>Add Bulk urls</li>
+<li>Delete Scan functionality</li>
+</ul>
+<h3 id="fix">Fix</h3>
+<ul>
+<li>Windows Installation issue fixed</li>
+<li>Scrollbar Issue on small screens fixed</li>
+</ul>
+<h3 id="v01-release-2020-07-08">V0.1 Release 2020-07-08</h3>
+<ul>
+<li>reconPoint is released</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © ThreatMatrix Project
+
+    </div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/khulnasoft" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://honeynetpublic.slack.com/archives/C01KVGMAKL6" rel="noopener" target="_blank" title="honeynetpublic.slack.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/company/khulnasoft" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="https://x.com/threat_matrix" rel="noopener" target="_blank" title="x.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.footer", "navigation.expand", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

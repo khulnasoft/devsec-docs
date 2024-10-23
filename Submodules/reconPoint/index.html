@@ -1,0 +1,1186 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A centralized documentation for all the projects under ThreatMatrix." name="description"/>
+<meta content="ThreatMatrix Project" name="author"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.27" name="generator"/>
+<title>Recon Point - ThreatMatrix Project Documentation</title>
+<link href="../../assets/stylesheets/main.6543a935.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../assets/css/custom.css" rel="stylesheet"/>
+<link href="../../assests/css/SwaggerDark.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DB4K9LZPDZ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DB4K9LZPDZ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DB4K9LZPDZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="DARKUI" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#recon-point">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ThreatMatrix Project Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../static/threat_matrix_negative.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ThreatMatrix Project Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Recon Point
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ThreatMatrix/introduction/">
+          
+  
+  ThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../pythreatmatrix/">
+          
+  
+  PyThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../GoThreatMatrix/">
+          
+  
+  GoThreatMatrix
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Guide-documentation/">
+          
+  
+  Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ThreatMatrix Project Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ThreatMatrix Project Documentation">
+<img alt="logo" src="../../static/threat_matrix_negative.png"/>
+</a>
+    ThreatMatrix Project Documentation
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/khulnasoft/ThreatMatrix" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    khulnasoft/ThreatMatrix
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    ThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            ThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/introduction/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/advanced_configuration/">
+<span class="md-ellipsis">
+    Advanced Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/usage/">
+<span class="md-ellipsis">
+    Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/advanced_usage/">
+<span class="md-ellipsis">
+    Advanced Usage
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/contribute/">
+<span class="md-ellipsis">
+    Contribute
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ThreatMatrix/api_docs/">
+<span class="md-ellipsis">
+    API docs
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    PyThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            PyThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/">
+<span class="md-ellipsis">
+    Quickstart
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Usage
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Modules
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/ThreatMatrixClass/">
+<span class="md-ellipsis">
+    ThreatMatrixClass
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/ThreatMatrixClientException/">
+<span class="md-ellipsis">
+    ThreatMatrixClientException
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pythreatmatrix/Tests/">
+<span class="md-ellipsis">
+    Tests
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    GoThreatMatrix
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            GoThreatMatrix
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../GoThreatMatrix/">
+<span class="md-ellipsis">
+    index
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Guide-documentation/">
+<span class="md-ellipsis">
+    Documentation guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Guide-docstrings/">
+<span class="md-ellipsis">
+    Docstrings guide
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    Submodules
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-reconpoint">
+<span class="md-ellipsis">
+      What is reconPoint?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+<span class="md-ellipsis">
+      Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-of-contents">
+<span class="md-ellipsis">
+      Table of Contents
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-reconpoint">
+<span class="md-ellipsis">
+      About reconPoint
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#workflow">
+<span class="md-ellipsis">
+      Workflow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#features">
+<span class="md-ellipsis">
+      Features
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-installation">
+<span class="md-ellipsis">
+      Quick Installation
+    </span>
+</a>
+<nav aria-label="Quick Installation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-setup-for-ubuntuvps">
+<span class="md-ellipsis">
+      Quick Setup for Ubuntu/VPS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-on-other-platforms">
+<span class="md-ellipsis">
+      Installation on Other Platforms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-video-tutorial">
+<span class="md-ellipsis">
+      Installation Video Tutorial
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updating">
+<span class="md-ellipsis">
+      Updating
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#community-curated-videos">
+<span class="md-ellipsis">
+      Community-Curated Videos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#screenshots">
+<span class="md-ellipsis">
+      Screenshots
+    </span>
+</a>
+<nav aria-label="Screenshots" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scan-results">
+<span class="md-ellipsis">
+      Scan Results
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-usage">
+<span class="md-ellipsis">
+      General Usage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiating-subscan">
+<span class="md-ellipsis">
+      Initiating Subscan
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recon-data-filtering">
+<span class="md-ellipsis">
+      Recon Data filtering
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#report-generation">
+<span class="md-ellipsis">
+      Report Generation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#toolbox">
+<span class="md-ellipsis">
+      Toolbox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-custom-tool-in-tools-arsenal">
+<span class="md-ellipsis">
+      Adding Custom tool in Tools Arsenal
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contributing">
+<span class="md-ellipsis">
+      Contributing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#submitting-issues">
+<span class="md-ellipsis">
+      Submitting issues
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#first-time-open-source-contributors">
+<span class="md-ellipsis">
+      First-time Open Source contributors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reconpoint-support">
+<span class="md-ellipsis">
+      reconPoint Support
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-and-sponsoring">
+<span class="md-ellipsis">
+      Support and Sponsoring
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reporting-security-vulnerabilities">
+<span class="md-ellipsis">
+      Reporting Security Vulnerabilities
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+<span class="md-ellipsis">
+      License
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/edit/master/docs/Submodules/reconPoint/README.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<a class="md-content__button md-icon" href="https://github.com/khulnasoft/ThreatMatrix/raw/master/docs/Submodules/reconPoint/README.md" title="View source of this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
+</a>
+<h1 id="recon-point">Recon Point</h1>
+<p>
+<a href="https://github.com/khulnasoft/reconpoint/releases" target="_blank">
+<img alt="reconPoint Latest Version" src="https://img.shields.io/badge/version-v2.2.0-informational?&amp;logo=none">
+</img></a>
+<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">
+<img alt="License" src="https://img.shields.io/badge/License-GPLv3-red.svg?&amp;logo=none">
+</img></a>
+<a href="#" target="_blank">
+<img alt="First Timers Only" src="https://img.shields.io/badge/first--timers--only-friendly-blue.svg?&amp;logo=none"/>
+</a>
+</p>
+<p>
+<a href="https://www.youtube.com/watch?v=Xk_YH83IQgg" target="_blank">
+<img alt="BlackHat Arsenal Asia 2023" src="https://img.shields.io/badge/BlackHat--Arsenal--Asia-2023-blue.svg?logo=none"/>
+</a>
+<a href="https://www.youtube.com/watch?v=Xk_YH83IQgg" target="_blank">
+<img alt="BlackHat Arsenal USA 2022" src="https://img.shields.io/badge/BlackHat--Arsenal--USA-2022-blue.svg?logo=none"/>
+</a>
+<a href="https://www.youtube.com/watch?v=Xk_YH83IQgg" target="_blank">
+<img alt="Open Source Summit 2022" src="https://img.shields.io/badge/Open--Source--Summit-2022-blue.svg?logo=none"/>
+</a>
+<a href="https://cyberweek.ae/2021/hitb-armory/" target="_blank">
+<img alt="HITB Armory 2021" src="https://img.shields.io/badge/HITB--Armory-2021-blue.svg?logo=none"/>
+</a>
+<a href="https://www.youtube.com/watch?v=7uvP6MaQOX0" target="_blank">
+<img alt="BlackHat Arsenal USA 2021" src="https://img.shields.io/badge/BlackHat--Arsenal--USA-2021-blue.svg?logo=none"/>
+</a>
+<a href="https://drive.google.com/file/d/1Bh8lbf-Dztt5ViHJVACyrXMiglyICPQ2/view?usp=sharing" target="_blank">
+<img alt="Defcon Demolabs 29 2021" src="https://img.shields.io/badge/Defcon--Demolabs--29-2021-blue.svg?logo=none"/>
+</a>
+<a href="https://www.youtube.com/watch?v=A1oNOIc0h5A" target="_blank">
+<img alt="BlackHat Arsenal Europe 2020" src="https://img.shields.io/badge/BlackHat--Arsenal--Europe-2020-blue.svg?&amp;logo=none"/>
+</a>
+</p>
+<p>
+<a href="https://github.com/khulnasoft/reconpoint/actions/workflows/codeql-analysis.yml" target="_blank">
+<img alt="CodeQL Analysis" src="https://github.com/khulnasoft/reconpoint/actions/workflows/codeql-analysis.yml/badge.svg"/>
+</a>
+<a href="https://github.com/khulnasoft/reconpoint/actions/workflows/build.yml" target="_blank">
+<img alt="Build Status" src="https://github.com/khulnasoft/reconpoint/actions/workflows/build.yml/badge.svg"/>
+</a>
+</p>
+<h2 id="what-is-reconpoint">What is reconPoint?</h2>
+<p>reconPoint is your ultimate web application reconnaissance suite, designed to supercharge the recon process for security pros, pentesters, and bug bounty hunters. It is a go-to tool that simplifies and streamlines reconnaissance, featuring configurable engines, data correlation, continuous monitoring, database-backed reconnaissance data, and an intuitive user interface. reconPoint redefines how you gather critical information about target web applications.</p>
+<p>Traditional reconnaissance tools often fall short in configurability and efficiency. reconPoint addresses these shortcomings and emerges as an excellent alternative to existing commercial tools.</p>
+<p><a href="https://youtu.be/VwkOWqiWW5g">Watch reconPoint 2.0-jasper release trailer here!</a></p>
+<hr/>
+<h2 id="documentation">Documentation</h2>
+<p>Detailed documentation available at <a href="https://recon.khulnasoft.com">https://recon.khulnasoft.com</a></p>
+<hr/>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#recon-point">Recon Point</a><ul>
+<li><a href="#what-is-reconpoint">What is reconPoint?</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#about-reconpoint">About reconPoint</a></li>
+<li><a href="#workflow">Workflow</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#quick-installation">Quick Installation</a><ul>
+<li><a href="#quick-setup-for-ubuntuvps">Quick Setup for Ubuntu/VPS</a></li>
+<li><a href="#installation-on-other-platforms">Installation on Other Platforms</a></li>
+<li><a href="#installation-video-tutorial">Installation Video Tutorial</a></li>
+</ul>
+</li>
+<li><a href="#updating">Updating</a></li>
+<li><a href="#community-curated-videos">Community-Curated Videos</a></li>
+<li><a href="#screenshots">Screenshots</a><ul>
+<li><a href="#scan-results">Scan Results</a></li>
+<li><a href="#general-usage">General Usage</a></li>
+<li><a href="#initiating-subscan">Initiating Subscan</a></li>
+<li><a href="#recon-data-filtering">Recon Data filtering</a></li>
+<li><a href="#report-generation">Report Generation</a></li>
+<li><a href="#toolbox">Toolbox</a></li>
+<li><a href="#adding-custom-tool-in-tools-arsenal">Adding Custom tool in Tools Arsenal</a></li>
+</ul>
+</li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#submitting-issues">Submitting issues</a></li>
+<li><a href="#first-time-open-source-contributors">First-time Open Source contributors</a></li>
+<li><a href="#reconpoint-support">reconPoint Support</a></li>
+<li><a href="#support-and-sponsoring">Support and Sponsoring</a></li>
+<li><a href="#reporting-security-vulnerabilities">Reporting Security Vulnerabilities</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="about-reconpoint">About reconPoint</h2>
+<p>reconPoint is a game-changing reconnaissance suite. It has turbocharged features for security professionals, penetration testers, and bug bounty hunters. It includes:</p>
+<ul>
+<li>Advanced scan engines</li>
+<li>Data correlation</li>
+<li>Continuous monitoring</li>
+<li>GPT-powered Vulnerability Reports</li>
+<li>Project management with role-based access control</li>
+</ul>
+<p>🦾 reconPoint performs end-to-end reconnaissance, from subdomain discovery to vulnerability scanning. It supports WHOIS identification, WAF detection, and more, making it a go-to tool for efficient reconnaissance.</p>
+<p>🗃️ reconPoint integrates with a database, providing seamless data correlation and organization, allowing you to filter reconnaissance data effortlessly.</p>
+<p>🔧 Highly configurable, reconPoint uses a YAML-based configuration system, offering customizable scan engines for all types of recon.</p>
+<p>💎  Subscans: Subscan is a game-changing feature in reconPoint, setting it apart as the only open-source tool of its kind to offer this capability. With Subscan, waiting for the entire pipeline to complete is a thing of the past. Now, users can swiftly respond to newfound discoveries during reconnaissance. Whether you've stumbled upon an intriguing subdomain and wish to conduct a focused port scan or want to delve deeper with a vulnerability assessment, reconPoint has you covered.</p>
+<p>📃   PDF Reports: In addition to its robust reconnaissance capabilities, reconPoint goes the extra mile by simplifying the report generation process, recognizing the crucial role that PDF reports play in the realm of end-to-end reconnaissance. Users can effortlessly generate and customize PDF reports to suit their exact needs. Whether it's a Full Scan Report, Vulnerability Report, or a concise reconnaissance report, reconPoint provides the flexibility to choose the report type that best communicates your findings. Moreover, the level of customization is unparalleled, allowing users to select report colors, fine-tune executive summaries, and even add personalized touches like company names and footers. With GPT integration, your reports aren't just a report, with remediation steps, and impacts, you get 360-degree view of the vulnerabilities you've uncovered.</p>
+<p>🔖    Say Hello to Projects! reconPoint 2.0 introduces a powerful addition that enables you to efficiently organize your web application reconnaissance efforts. With this feature, you can create distinct project spaces, each tailored to a specific purpose, such as personal bug bounty hunting, client engagements, or any other specialized recon task. Each projects will have separate dashboard and all the scan results will be separated from each project, while scan engines and configuration will be shared across all the projects.</p>
+<p>⚙️    Roles and Permissions! In reconPoint 2.0, we've taken your web application reconnaissance to a whole new level of control and security. Now, you can assign distinct roles to your team members—Sys Admin, Penetration Tester, and Auditor—each with precisely defined permissions to tailor their access and actions within the reconPoint ecosystem.</p>
+<ul>
+<li>🔐 Sys Admin: Sys Admin is a superuser that has permission to modify system and scan related configurations, scan engines, create new users, add new tools etc. Superuser can initiate scans and subscans effortlessly.</li>
+<li>🔍 Penetration Tester: Penetration Tester will be allowed to modify and initiate scans and subscans, add or update targets, etc. A penetration tester will not be allowed to modify system configurations.</li>
+<li>📊 Auditor: Auditor can only view and download the report. An auditor can not change any system or scan related configurations nor can initiate any scans or subscans.</li>
+</ul>
+<p>🚀   GPT Vulnerability Report Generation: Get ready for the future of penetration testing reports with reconPoint's groundbreaking feature: "GPT-Powered Report Generation"! With the power of OpenAI's GPT, reconPoint now provides you with detailed vulnerability descriptions, remediation strategies, and impact assessments that read like they were written by a human security expert! <strong>But that's not all!</strong> Our GPT-driven reports go the extra mile by scouring the web for related news articles, blogs, and references, so you have a 360-degree view of the vulnerabilities you've uncovered. With reconPoint 2.0 revolutionize your penetration testing game and impress your clients with reports that are not just informative but engaging and comprehensive with detailed analysis on impact assessment and remediation strategies.</p>
+<p>🥷   GPT-Powered Attack Surface Generation: With reconPoint 2.0, reconPoint seamlessly integrates with GPT to identify the attacks that you can likely perform on a subdomain. By making use of reconnaissance data such as page title, open ports, subdomain name etc. reconPoint can advise you the attacks you could perform on a target. reconPoint will also provide you the rationale on why the specific attack is likely to be successful.</p>
+<p>🧭  Continuous monitoring: Continuous monitoring is at the core of reconPoint's mission, and it's robust continuous monitoring feature ensures that their targets are under constant scrutiny. With the flexibility to schedule scans at regular intervals, penetration testers can effortlessly stay informed about their targets. What sets reconPoint apart is its seamless integration with popular notification channels such as Discord, Slack, and Telegram, delivering real-time alerts for newly discovered subdomains, vulnerabilities, or any changes in reconnaissance data.</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="workflow">Workflow</h2>
+<p><img src="https://github.com/khulnasoft/reconpoint/assets/17223002/10c475b8-b4a8-440d-9126-77fe2038a386"/></p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Reconnaissance:<ul>
+<li>Subdomain Discovery</li>
+<li>IP and Open Ports Identification</li>
+<li>Endpoints Discovery</li>
+<li>Directory/Files fuzzing</li>
+<li>Screenshot Gathering</li>
+<li>Vulnerability Scan<ul>
+<li>Nuclei</li>
+<li>Dalfox XSS Scanner</li>
+<li>CRLFuzzer</li>
+<li>Misconfigured S3 Scanner</li>
+</ul>
+</li>
+<li>WHOIS Identification</li>
+<li>WAF Detection</li>
+</ul>
+</li>
+<li>OSINT Capabilities<ul>
+<li>Meta info Gathering</li>
+<li>Employees Gathering</li>
+<li>Email Address gathering</li>
+<li>Google Dorking for sensitive info and urls</li>
+</ul>
+</li>
+<li>Projects, create distinct project spaces, each tailored to a specific purpose, such as personal bug bounty hunting, client engagements, or any other specialized recon task.</li>
+<li>Perform Advanced Query lookup using natural language alike and, or, not operations</li>
+<li>Highly configurable YAML-based Scan Engines</li>
+<li>Support for Parallel Scans</li>
+<li>Support for Subscans</li>
+<li>Recon Data visualization</li>
+<li>GPT Vulnerability Description, Impact and Remediation generation</li>
+<li>GPT Attack Surface Generator</li>
+<li>Multiple Roles and Permissions to cater a team's need</li>
+<li>Customizable Alerts/Notifications on Slack, Discord, and Telegram</li>
+<li>Automatically report Vulnerabilities to HackerOne</li>
+<li>Recon Notes and Todos</li>
+<li>Clocked Scans (Run reconnaissance exactly at X Hours and Y minutes) and Periodic Scans (Runs reconnaissance every X minutes/- hours/days/week)</li>
+<li>Proxy Support</li>
+<li>Screenshot Gallery with Filters</li>
+<li>Powerful recon data filtering with autosuggestions</li>
+<li>Recon Data changes, find new/removed subdomains/endpoints</li>
+<li>Tag targets into the Organization</li>
+<li>Smart Duplicate endpoint removal based on page title and content length to cleanup the reconnaissance data</li>
+<li>Identify Interesting Subdomains</li>
+<li>Custom GF patterns and custom Nuclei Templates</li>
+<li>Edit tool-related configuration files (Nuclei, Subfinder, Naabu, amass)</li>
+<li>Add external tools from GitHub/Go</li>
+<li>Interoperable with other tools, Import/Export Subdomains/Endpoints</li>
+<li>Import Targets via IP and/or CIDRs</li>
+<li>Report Generation</li>
+<li>Toolbox: Comes bundled with most commonly used tools during penetration testing such as whois lookup, CMS detector, CVE lookup, etc.</li>
+<li>Identification of related domains and related TLDs for targets</li>
+<li>Find actionable insights such as Most Common Vulnerability, Most Common CVE ID, Most Vulnerable Target/Subdomain, etc.</li>
+<li>You can now use local LLMs for Attack surface identification and vulnerability description (NEW: reconPoint 2.1.0)</li>
+</ul>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="quick-installation">Quick Installation</h2>
+<h3 id="quick-setup-for-ubuntuvps">Quick Setup for Ubuntu/VPS</h3>
+<ol>
+<li>
+<p>Clone the repository</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/khulnasoft/reconpoint<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>reconpoint
+</span></code></pre></div>
+</li>
+<li>
+<p>Configure the environment</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>nano<span class="w"> </span>.env
+</span></code></pre></div>
+<p><strong>Ensure you change the <code>POSTGRES_PASSWORD</code> for security.</strong></p>
+</li>
+<li>
+<p>(Optional) For non-interactive install, set admin credentials in <code>.env</code></p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">DJANGO_SUPERUSER_USERNAME</span><span class="o">=</span>yourUsername
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">DJANGO_SUPERUSER_EMAIL</span><span class="o">=</span>YourMail@example.com
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nv">DJANGO_SUPERUSER_PASSWORD</span><span class="o">=</span>yourStrongPassword
+</span></code></pre></div>
+<p>If you need to carry out a non-interactive installation, you can setup the login, email and password of the web interface admin directly from the .env file (instead of manually setting them from prompts during the installation process). This option can be interesting for automated installation (via ansible, vagrant, etc.).</p>
+<ul>
+<li><code>DJANGO_SUPERUSER_USERNAME</code>: web interface admin username (used to login to the web interface).</li>
+</ul>
+<ul>
+<li><code>DJANGO_SUPERUSER_EMAIL</code>: web interface admin email.</li>
+</ul>
+<ul>
+<li><code>DJANGO_SUPERUSER_PASSWORD</code>: web interface admin password (used to login to the web interface).</li>
+</ul>
+</li>
+<li>
+<p>Adjust Celery worker scaling in <code>.env</code></p>
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">MAX_CONCURRENCY</span><span class="o">=</span><span class="m">80</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nv">MIN_CONCURRENCY</span><span class="o">=</span><span class="m">10</span>
+</span></code></pre></div>
+<p><code>MAX_CONCURRENCY</code>: This parameter specifies the maximum number of reconPoint's concurrent Celery worker processes that can be spawned. In this case, it's set to 80, meaning that the application can utilize up to 80 concurrent worker processes to execute tasks concurrently. This is useful for handling a high volume of scans or when you want to scale up processing power during periods of high demand. If you have more CPU cores, you will need to increase this for maximised performance.</p>
+<p><code>MIN_CONCURRENCY</code>: On the other hand, MIN_CONCURRENCY specifies the minimum number of concurrent worker processes that should be maintained, even during periods of lower demand. In this example, it's set to 10, which means that even when there are fewer tasks to process, at least 10 worker processes will be kept running. This helps ensure that the application can respond promptly to incoming tasks without the overhead of repeatedly starting and stopping worker processes.</p>
+<p>These settings allow for dynamic scaling of Celery workers, ensuring that the application efficiently manages its workload by adjusting the number of concurrent workers based on the workload's size and complexity.</p>
+<p>Here is the ideal value for <code>MIN_CONCURRENCY</code> and <code>MAX_CONCURRENCY</code> depending on the number of RAM your machine has:</p>
+<ul>
+<li>4GB: <code>MAX_CONCURRENCY=10</code></li>
+<li>8GB: <code>MAX_CONCURRENCY=30</code></li>
+<li>16GB: <code>MAX_CONCURRENCY=50</code></li>
+</ul>
+<p>This is just an ideal value which developers have tested and tried out and works! But feel free to play around with the values.
+ Maximum number of scans is determined by various factors, your network bandwidth, RAM, number of CPUs available. etc</p>
+</li>
+<li>
+<p>Run the installation script:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>./install.sh
+</span></code></pre></div>
+<p>For non-interactive install: <code>sudo ./install.sh -n</code></p>
+<p><em>Note: If needed, run <code>chmod +x install.sh</code> to grant execution permissions.</em></p>
+</li>
+</ol>
+<p><strong>reconPoint can now be accessed from <a href="https://127.0.0.1">https://127.0.0.1</a> or if you're on the VPS <a href="https://your_vps_ip_address">https://your_vps_ip_address</a></strong></p>
+<p><strong>Unless you are on development branch, please do not access reconPoint via any ports</strong></p>
+<h3 id="installation-on-other-platforms">Installation on Other Platforms</h3>
+<p>For Mac, Windows, or other systems, refer to our detailed installation guide <a href="https://recon.khulnasoft.com/install/detailed/">https://recon.khulnasoft.com/install/detailed/</a></p>
+<h3 id="installation-video-tutorial">Installation Video Tutorial</h3>
+<p>If you encounter any issues during installation or prefer a visual guide, one of our community members has created an excellent installation video for Kali Linux installation. You can find it here: <a href="https://www.youtube.com/watch?v=7OFfrU6VrWw">https://www.youtube.com/watch?v=7OFfrU6VrWw</a></p>
+<p>Please note: This is community-curated content and is not owned by reconPoint. The installation process may change, so please refer to the official documentation for the most up-to-date instructions.</p>
+<h2 id="updating">Updating</h2>
+<ol>
+<li>
+<p>To update reconPoint, run:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>reconpoint<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w">  </span>sudo<span class="w"> </span>./update.sh
+</span></code></pre></div>
+<p>If <code>update.sh</code> lacks execution permissions, use:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>update.sh
+</span></code></pre></div>
+</li>
+</ol>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="community-curated-videos">Community-Curated Videos</h2>
+<p>reconPoint has a vibrant community that often creates helpful content about installation, features, and usage. Below is a collection of community-curated videos that you might find useful. Please note that these videos are not official reconPoint content, and the information they contain may become outdated as reconPoint evolves.</p>
+<p>Always refer to the official documentation for the most up-to-date and accurate information. If you've created a video about reconPoint and would like it featured here, please send a pull request updating this table.</p>
+<table>
+<thead>
+<tr>
+<th>Video Title</th>
+<th>Language</th>
+<th>Uploader</th>
+<th>Date</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reconPoint Installation on Kali Linux</td>
+<td>English</td>
+<td>Secure the Cyber World</td>
+<td>2024-02-29</td>
+<td><a href="https://www.youtube.com/watch?v=7OFfrU6VrWw">Watch</a></td>
+</tr>
+<tr>
+<td>Resultados do ReconPoint - Automação para Recon</td>
+<td>Portuguese</td>
+<td>Guia Anônima</td>
+<td>2023-04-18</td>
+<td><a href="https://www.youtube.com/watch?v=6aNvDy1FzIM">Watch</a></td>
+</tr>
+<tr>
+<td>reconPoint Introduction</td>
+<td>Moroccan Arabic</td>
+<td>Th3 Hacker News Bdarija</td>
+<td>2021-07-27</td>
+<td><a href="https://www.youtube.com/watch?v=9FuRrcmWgWU">Watch</a></td>
+</tr>
+</tbody>
+</table>
+<p>We appreciate the community's contributions in creating these resources.</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="scan-results">Scan Results</h3>
+<p><img alt="" src=".github/screenshots/scan_results.gif"/></p>
+<h3 id="general-usage">General Usage</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993781-b6012995-522b-480a-a8bf-911193d35894.gif"/></p>
+<h3 id="initiating-subscan">Initiating Subscan</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993749-1ad343d6-8ce7-43d6-aee7-b3add0321da7.gif"/></p>
+<h3 id="recon-data-filtering">Recon Data filtering</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993687-b63f3de8-e033-4ac0-808e-a2aa377d3cf8.gif"/></p>
+<h3 id="report-generation">Report Generation</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993689-c796c6cd-eb61-43f4-800d-08aba9740088.gif"/></p>
+<h3 id="toolbox">Toolbox</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993751-d687e88a-eb79-440f-9dc0-0ad006901620.gif"/></p>
+<h3 id="adding-custom-tool-in-tools-arsenal">Adding Custom tool in Tools Arsenal</h3>
+<p><img src="https://user-images.githubusercontent.com/17223002/164993670-466f6459-9499-498b-a9bd-526476d735a7.gif"/></p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions of all sizes! The open-source community thrives on collaboration, and your input is invaluable. Whether you're fixing a typo, improving UI, or adding new features, every contribution matters.</p>
+<p>How you can contribute:</p>
+<ul>
+<li>Code improvements</li>
+<li>Documentation updates</li>
+<li>Bug reports and fixes</li>
+<li>New feature suggestions and implementations</li>
+<li>UI/UX enhancements</li>
+</ul>
+<p>To get started:</p>
+<ol>
+<li>Check our <a href=".github/CONTRIBUTING/">Contributing Guide</a></li>
+<li>Pick an <a href="https://github.com/khulnasoft/reconpoint/issues">open issue</a> or propose a new one</li>
+<li>Fork the repository and create your branch</li>
+<li>Make your changes and submit a pull request</li>
+</ol>
+<p>Remember, no contribution is too small. Your efforts help make reconPoint better for everyone!</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="submitting-issues">Submitting issues</h2>
+<p>When submitting issues, provide as much valuable information as possible to help developers resolve the problem quickly. Follow these steps to gather detailed debug information:</p>
+<ol>
+<li>
+<p>Enable Debug Mode:</p>
+<ul>
+<li>Edit <code>web/entrypoint.sh</code> in the project root</li>
+<li>
+<p>Add <code>export DEBUG=1</code> at the top of the file:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="m">1</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>python3<span class="w"> </span>manage.py<span class="w"> </span>migrate
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a>python3<span class="w"> </span>manage.py<span class="w"> </span>runserver<span class="w"> </span><span class="m">0</span>.0.0.0:8000
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="nb">exec</span><span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+</span></code></pre></div>
+</li>
+</ul>
+<ul>
+<li>Restart the web container: <code>docker-compose restart web</code></li>
+</ul>
+</li>
+<li>
+<p>View Debug Output:</p>
+<ul>
+<li>Run <code>make logs</code> to see the full stack trace</li>
+<li>Check the browser's developer console for XHR requests with 500 errors</li>
+</ul>
+</li>
+<li>
+<p>Example Debug Output:</p>
+<p>```text
+ web_1          |   File "/usr/local/lib/python3.10/dist-packages/celery/app/task.py", line 411, in <strong>call</strong>
+ web_1          |     return self.run(<em>args, *</em>kwargs)
+ web_1          | TypeError: run_command() got an unexpected keyword argument 'echo'</p>
+</li>
+<li>
+<p>Submit Your Issue:</p>
+<ul>
+<li>Include the full stack trace in your GitHub issue</li>
+<li>Describe the steps to reproduce the problem</li>
+<li>Mention any relevant system information</li>
+</ul>
+</li>
+<li>
+<p>Disable Debug Mode:</p>
+<ul>
+<li>Set <code>DEBUG=0</code> in <code>web/entrypoint.sh</code></li>
+<li>Restart the web container</li>
+</ul>
+</li>
+</ol>
+<p>By providing this detailed information, you significantly help developers identify and fix issues more efficiently.</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="first-time-open-source-contributors">First-time Open Source contributors</h2>
+<p>reconPoint is an open-source project that welcomes contributors of all experience levels, including beginners. If you've never contributed to open source before, we encourage you to start here!</p>
+<ul>
+<li>We're proud to support your first Pull Request (PR)</li>
+<li>Check our <a href="https://github.com/khulnasoft/reconpoint/issues">open issues</a> for starter-friendly tasks</li>
+<li>Don't hesitate to ask questions in our community channels</li>
+</ul>
+<p>Your contribution, no matter how small, is valuable to us.</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="reconpoint-support">reconPoint Support</h2>
+<p>Before seeking support:</p>
+<ul>
+<li>Please carefully read the README and documentation at <a href="https://recon.khulnasoft.com">recon.khulnasoft.com</a>.</li>
+<li>Most common questions and issues are addressed there.</li>
+</ul>
+<p>If you still need assistance:</p>
+<ul>
+<li>Do not use GitHub issues for support requests.</li>
+<li>Join our <a href="https://discord.gg/azv6fzhNCE">community-maintained Discord channel</a>.</li>
+</ul>
+<p>Please note:</p>
+<ul>
+<li>The Discord channel is maintained by the community.</li>
+<li>While we strive to help, there's no guarantee of support or response time.</li>
+<li>For confirmed bugs or feature requests, consider opening a GitHub issue.</li>
+</ul>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="support-and-sponsoring">Support and Sponsoring</h2>
+<p>reconPoint is a passion project developed in my free time, alongside my day job. Your support helps keep this project alive and growing. Here's how you can contribute:</p>
+<ul>
+<li>Add a <a href="https://github.com/khulnasoft/reconpoint">GitHub Star</a> to the project.</li>
+<li>Share about reconPoint on social media or in blog posts</li>
+<li>Nominate me for <a href="https://stars.github.com/nominate/">GitHub Stars?</a></li>
+<li>Use my <a href="https://m.do.co/c/e353502d19fc">DigitalOcean referral link</a> to get $100 credit (I receive $25)</li>
+</ul>
+<p>Your support, whether through donations or simply giving a star, tells me that reconPoint is valuable to you. It motivates me to continue improving and adding features to make reconPoint the go-to tool for reconnaissance.</p>
+<p>Thank you for your support!</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="reporting-security-vulnerabilities">Reporting Security Vulnerabilities</h2>
+<p>We appreciate your efforts to responsibly disclose your findings and will make every effort to acknowledge your contributions.</p>
+<p>To report a security vulnerability, please follow these steps:</p>
+<ol>
+<li>
+<p><strong>Do Not</strong> disclose the vulnerability publicly on GitHub issues or any other public forum.</p>
+</li>
+<li>
+<p>Go to the <a href="https://github.com/khulnasoft/reconpoint/security">Security tab</a> of the reconPoint repository.</p>
+</li>
+<li>
+<p>Click on "Report a vulnerability" to open GitHub's private vulnerability reporting form.</p>
+</li>
+<li>
+<p>Provide a detailed description of the vulnerability, including:</p>
+<ul>
+<li>Steps to reproduce</li>
+<li>Potential impact</li>
+<li>Any suggested fixes or mitigations (if you have them)</li>
+</ul>
+</li>
+<li>
+<p>I will review your report and respond as quickly as possible, usually within 48-72 hours.</p>
+</li>
+<li>
+<p>Please allow some time to investigate and address the vulnerability before disclosing it to others.</p>
+</li>
+</ol>
+<p>We are committed to working with security researchers to verify and address any potential vulnerabilities reported to us. After fixing the issue, we will publicly acknowledge your responsible disclosure, unless you prefer to remain anonymous.</p>
+<p>Thank you for helping to keep reconPoint and its users safe!</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<h2 id="license">License</h2>
+<p>Distributed under the GNU GPL v3 License. See <a href="LICENSE">LICENSE</a> for more information.</p>
+<p><img alt="-----------------------------------------------------" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png"/></p>
+<p align="right"><i>Note: Parts of this README were written or refined using AI language models.</i></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © ThreatMatrix Project
+
+    </div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/khulnasoft" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://honeynetpublic.slack.com/archives/C01KVGMAKL6" rel="noopener" target="_blank" title="honeynetpublic.slack.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/company/khulnasoft" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="https://x.com/threat_matrix" rel="noopener" target="_blank" title="x.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.footer", "navigation.expand", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>
