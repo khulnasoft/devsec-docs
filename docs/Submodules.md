@@ -7,7 +7,7 @@ In the ThreatMatrix documentation site, we use Git submodules to manage multiple
 There are four submodules under the khulnasoft:
 
 1. ThreatMatrix
-2. GreedyBear
+2. ThreatPot
 3. pythreatmatrix
 4. GoThreatMatrix
 

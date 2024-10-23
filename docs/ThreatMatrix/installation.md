@@ -154,7 +154,7 @@ If you use a local PostgreSQL instance (this is the default), in the `env_file_p
 
 - `POSTGRES_PASSWORD` (same as `DB_PASSWORD`)
 - `POSTGRES_USER` (same as `DB_USER`)
-- `POSTGRES_DB` (default: `intel_owl_db`)
+- `POSTGRES_DB` (default: `threat_matrix_db`)
 
 ### Logrotate configuration (strongly recommended)
 
@@ -187,7 +187,7 @@ cd ./docker/scripts
 Intel Owl provides basic configuration for:
 
 - Nginx (`configuration/nginx/http.conf`)
-- Uwsgi (`configuration/intel_owl.ini`)
+- Uwsgi (`configuration/threat_matrix.ini`)
 
 In case you enable HTTPS, remember to set the environment variable `HTTPS_ENABLED` as "enabled" to increment the security of the application.
 
@@ -205,7 +205,7 @@ There are 3 options to execute the web server:
 
   Then you should call the `./start` script with the parameter `--https` to leverage the right Docker Compose file for HTTPS.
 
-  Plus, if you use [Flower](https://khulnasoft.github.io/docs/ThreatMatrix/advanced_configuration/#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
+  Plus, if you use [Flower](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_configuration/#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
 
 - **HTTPS with Let's Encrypt**
 
@@ -228,7 +228,7 @@ The CLI provides the primitives to correctly build, run or stop the containers f
 
 <ul>
 <li>It is possible to attach every optional docker container that ThreatMatrix has:
-<a href="https://khulnasoft.github.io/docs/ThreatMatrix/advanced_configuration/#multi-queue"><em>multi_queue</em></a> with <em>traefik</em> enabled while every <a href="https://khulnasoft.github.io/docs/ThreatMatrix/advanced_usage/#optional-analyzers">optional docker analyzer</a> is active.</li> 
+<a href="https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_configuration/#multi-queue"><em>multi_queue</em></a> with <em>traefik</em> enabled while every <a href="https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_usage/#optional-analyzers">optional docker analyzer</a> is active.</li> 
 <li>It is possible to insert an optional docker argument that the CLI will pass to <code>docker compose</code></li>
 </ul>
 </div>
@@ -308,7 +308,7 @@ If you make some code changes and you like to rebuild the project, follow these 
 To update the project with the most recent available code you have to follow these steps:
 
 ```bash
-$ cd <your_intel_owl_directory> # go into the project directory
+$ cd <your_threat_matrix_directory> # go into the project directory
 $ git pull # pull new changes
 $ ./start prod down # kill and destroy the currently running ThreatMatrix containers
 $ ./start prod up # restart the ThreatMatrix application
@@ -324,13 +324,13 @@ After an upgrade, sometimes a database error in Celery Containers could happen. 
 After having upgraded ThreatMatrix, in case the application does not start and you get an error like this:
 
 ```bash
-PermissionError: [Errno 13] Permission denied: '/var/log/intel_owl/django/authentication.log
+PermissionError: [Errno 13] Permission denied: '/var/log/threat_matrix/django/authentication.log
 ```
 
 just run this:
 
 ```bash
-sudo chown -R www-data:www-data /var/lib/docker/volumes/intel_owl_generic_logs/_data/django
+sudo chown -R www-data:www-data /var/lib/docker/volumes/threat_matrix_generic_logs/_data/django
 ```
 
 and restart ThreatMatrix. It should solve the permissions problem.
@@ -377,11 +377,11 @@ The database migration procedure is as follows:
 - You have ThreatMatrix version 5.x.x up and running
 - Bring down the application (you can use the start script or manually concatenate your docker compose configuration )
 - Go inside the docker folder `cd docker`
-- Bring only the postgres 12 container up `docker run -d --name threatmatrix_postgres_12 -v intel_owl_postgres_data:/var/lib/postgresql/data/ --env-file env_file_postgres  library/postgres:12-alpine`
+- Bring only the postgres 12 container up `docker run -d --name threatmatrix_postgres_12 -v threat_matrix_postgres_data:/var/lib/postgresql/data/ --env-file env_file_postgres  library/postgres:12-alpine`
 - Dump the entire database. You need the user and the database that you configured during startup for this `docker exec -t threatmatrix_postgres_12  pg_dump -U <POSTGRES_USER> -d <POSTGRES_DB> --no-owner > /tmp/dump_threatmatrix.sql`
 - Stop che container `docker container stop threatmatrix_postgres_12`
 - Remove the backup container `docker container rm threatmatrix_postgres_12`
-- Remove the postgres volume `docker volume rm intel_owl_postgres_data` <------------- remove old data, this is not exactly necessary because the new postgres has a different volume name
+- Remove the postgres volume `docker volume rm threat_matrix_postgres_data` <------------- remove old data, this is not exactly necessary because the new postgres has a different volume name
 - Start the intermediary postgres 16 container `docker run -d --name threatmatrix_postgres_16 -v threatmatrix_postgres_data:/var/lib/postgresql/data/ --env-file env_file_postgres  library/postgres:16-alpine`
 - Add the data to the volume `cat /tmp/dump_threatmatrix.sql | docker exec -i threatmatrix_postgres_16 psql -U <POSTGRES_USER> -d <POSTGRES_DB>`
 - Stop the intermediary container `docker container stop threatmatrix_postgres_16`
@@ -395,7 +395,7 @@ ThreatMatrix v5 introduced some major changes regarding how the plugins and thei
 Before upgrading, some important things should be checked by the administrator:
 
 - A lot of database migrations will need to be applied. Just be patient few minutes once you install the new major release. If you get 500 status code errors in the GUI, just wait few minutes and then refresh the page.
-- We moved away from the old big `analyzer_config.json` which was storing all the base configuration of the Analyzers to a database model (we did the same for all the other plugins types too). This allows us to manage plugins creation/modification/deletion in a more reliable manner and via the Django Admin Interface. If you have created custom plugins and changed those `<plugins>_config.json` file manually, you would need to re-create those custom plugins again from the Django Admin Interface. To do that please follow the [related new documentation](https://khulnasoft.github.io/docs/ThreatMatrix/usage/#analyzers-customization)
+- We moved away from the old big `analyzer_config.json` which was storing all the base configuration of the Analyzers to a database model (we did the same for all the other plugins types too). This allows us to manage plugins creation/modification/deletion in a more reliable manner and via the Django Admin Interface. If you have created custom plugins and changed those `<plugins>_config.json` file manually, you would need to re-create those custom plugins again from the Django Admin Interface. To do that please follow the [related new documentation](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/usage/#analyzers-customization)
 - We have REMOVED all the analyzers that we deprecated during the v4 releases cycle. Please substitute them with their respective new names, in case they have a replacement.
   - REMOVED `Pulsedive_Active_IOC` analyzer. Please substitute it with the new `Pulsedive` analyzer.
   - REMOVED `Fortiguard` analyzer because endpoint does not work anymore. No substitute.

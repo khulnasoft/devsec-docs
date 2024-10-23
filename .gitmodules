@@ -7,3 +7,12 @@
 [submodule "docs/Submodules/GoThreatMatrix"]
 	path = docs/Submodules/GoThreatMatrix
 	url = https://github.com/khulnasoft/go-threatmatrix.git
+[submodule "docs/Submodules/ThreatPot"]
+	path = docs/Submodules/ThreatPot
+	url = https://github.com/khulnasoft/ThreatPot.git
+[submodule "docs/Submodules/CyberPot"]
+	path = docs/Submodules/CyberPot
+	url = https://github.com/khulnasoft/CyberPot.git
+[submodule "docs/Submodules/reconPoint"]
+	path = docs/Submodules/reconPoint
+	url = https://github.com/khulnasoft/reconPoint.git

@@ -109,7 +109,7 @@ The following is the list of the available analyzers you can run out-of-the-box.
   - [Facebook Yara rules](https://github.com/facebook/malware-detection)
   - [edelucia Yara rules](https://github.com/edelucia/rules/tree/main/yara)
   - [LOLDrivers Yara Rules](https://github.com/magicsword-io/LOLDrivers)
-  - your own added signatures. See [Advanced-Usage](https://khulnasoft.github.io/docs/ThreatMatrix/advanced_usage/#analyzers-with-special-configuration) for more details.
+  - your own added signatures. See [Advanced-Usage](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_usage/#analyzers-with-special-configuration) for more details.
 - `Zippy_scan` : [Zippy](https://github.com/thinkst/zippy): Fast method to classify text as AI or human-generated; takes in `lzma`,`zlib`,`brotli` as input based engines; `ensemble` being default.
 - `Blint`: [Blint](https://github.com/owasp-dep-scan/blint) is a Binary Linter that checks the security properties and capabilities of your executables. Supported binary formats: - Android (apk, aab) - ELF (GNU, musl) - PE (exe, dll) - Mach-O (x64, arm64)
 - `Mobsf`: [MobSF](https://github.com/MobSF/mobsfscan/) is a static analysis tool that can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Android XML, Swift and Objective C Code.
@@ -176,9 +176,9 @@ The following is the list of the available analyzers you can run out-of-the-box.
 - `FileScan_Search`: Finds reports and uploaded files by various tokens, like hash, filename, verdict, IOCs etc via [FileScan.io API](https://www.filescan.io/api/docs).
 - `FireHol_IPList`: check if an IP is in [FireHol's IPList](https://iplists.firehol.org/)
 - `GoogleSafebrowsing`: Scan an observable against GoogleSafeBrowsing DB
-- `GoogleWebRisk`: Scan an observable against WebRisk API (Commercial version of Google Safe Browsing). Check the [docs](https://khulnasoft.github.io/docs/ThreatMatrix/advanced_usage/#analyzers-with-special-configuration) to enable this properly
+- `GoogleWebRisk`: Scan an observable against WebRisk API (Commercial version of Google Safe Browsing). Check the [docs](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_usage/#analyzers-with-special-configuration) to enable this properly
 - `Google_DNS`: Retrieve current domain resolution with Google DoH (DNS over HTTPS)
-- `GreedyBear`: scan an IP or a domain against the [GreedyBear](https://greedybear.honeynet.org/) API (requires API key)
+- `ThreatPot`: scan an IP or a domain against the [ThreatPot](https://threatpot.honeynet.org/) API (requires API key)
 - `GreyNoise`: scan an IP against the [Greynoise](https://www.greynoise.io/) API (requires API key)
 - `GreyNoiseCommunity`: scan an IP against the [Community Greynoise API](https://www.greynoise.io/) (requires API key))
 - `Greynoise_Labs`: scan an IP against the [Greynoise API](https://www.greynoise.io/) (requires authentication token which can be obtained from cookies on Greynoise website after launching the playground from [here](https://api.labs.greynoise.io/))
@@ -276,7 +276,7 @@ Some analyzers require details other than just IP, URL, Domain, etc. We classifi
 
 ##### Optional analyzers
 
-[Some analyzers are optional](https://khulnasoft.github.io/docs/ThreatMatrix/advanced_usage/#optional-analyzers) and need to be enabled explicitly.
+[Some analyzers are optional](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_usage/#optional-analyzers) and need to be enabled explicitly.
 
 ### Connectors
 
@@ -311,7 +311,7 @@ This is a "SOAR" feature that allows the users to connect multiple analysis toge
 - `TakedownRequestToAbuseIp`: This Plugin leverages results from DNS resolver analyzers to extract a valid IP address to pivot to the Abusix analyzer.
 - `AbuseIpToSubmission`: This Plugin leverages results from the Abusix analyzer to extract the abuse contacts of an IP address to pivot to the AbuseSubmitter connector.
 
-You can build your own custom Pivot with your custom logic with just few lines of code. See the [Contribute](https://khulnasoft.github.io/docs/ThreatMatrix/contribute/#how-to-add-a-new-pivot) section for more info.
+You can build your own custom Pivot with your custom logic with just few lines of code. See the [Contribute](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/contribute/#how-to-add-a-new-pivot) section for more info.
 
 #### Creating Pivots from the GUI
 
@@ -346,7 +346,7 @@ The visualizer adds logic after the computations, allowing to show the final res
 Visualizers can be executed only during `Scans` through the playbook that has been configured on the visualizer itself.
 
 This framework is extremely powerful and allows every user to customize the GUI as they wish. But you know...with great power comes great responsability. To fully leverage this framework, you would need to put some effort in place. You would need to understand which data is useful for you and then write few code lines that would create your own GUI.
-To simplify the process, take example from the pre-built visualizers listed below and follow the dedicated [documentation](https://khulnasoft.github.io/docs/ThreatMatrix/contribute/#how-to-add-a-new-visualizer).
+To simplify the process, take example from the pre-built visualizers listed below and follow the dedicated [documentation](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/contribute/#how-to-add-a-new-visualizer).
 
 ##### List of pre-built Visualizers
 
@@ -417,7 +417,7 @@ The created Playbook would be available to yourself only. If you want either to 
 
 ### Generic Plugin Creation, Configuration and Customization
 
-If you want to create completely new Plugins (not based on already existing python modules), please refer to the [Contribute](https://khulnasoft.github.io/docs/ThreatMatrix/contribute/#how-to-add-a-new-plugin) section. This is usually the case when you want to integrate ThreatMatrix with either a new tool or a new service.
+If you want to create completely new Plugins (not based on already existing python modules), please refer to the [Contribute](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/contribute/#how-to-add-a-new-plugin) section. This is usually the case when you want to integrate ThreatMatrix with either a new tool or a new service.
 
 On the contrary, if you would like to just customize the already existing plugins, this is the place.
 
@@ -437,7 +437,7 @@ The following are the most important fields that you can change without touching
 - `Python Module`: Python path of the class that will be executed. This should not be changed most of the times.
 - `Maximum TLP`: see [TLP Support](#tlp-support)
 - `Soft Time Limit`: this is the maximum time (in seconds) of execution for an analyzer. Once reached, the task will be killed (or managed in the code by a custom Exception). Default `300`.
-- `Routing Key`: this takes effects only when [multi-queue](https://khulnasoft.github.io/docs/ThreatMatrix/advanced_configuration/#multi-queue) is enabled. Choose which celery worker would execute the task: `local` (ideal for tasks that leverage local applications like Yara), `long` (ideal for long tasks) or `default` (ideal for simple webAPI-based analyzers).
+- `Routing Key`: this takes effects only when [multi-queue](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_configuration/#multi-queue) is enabled. Choose which celery worker would execute the task: `local` (ideal for tasks that leverage local applications like Yara), `long` (ideal for long tasks) or `default` (ideal for simple webAPI-based analyzers).
 
 For analyzers only:
 
@@ -496,7 +496,7 @@ You can change the Plugin Parameters at 5 different levels:
 - if you are an ThreatMatrix superuser, you can go in the Django Admin Interface and change the default values of the parameters for every plugin you like. This option would change the default behavior for every user in the platform.
 - if you are either Owner or Admin of an org, you can customize the default values of the parameters for every member of the organization by leveraging the GUI in the "Organization Config" section. This overrides the previous option.
 - if you are a normal user, you can customize the default values of the parameters for your analysis only by leveraging the GUI in the "Plugin config" section. This overrides the previous option.
-- You can choose to provide runtime configuration when requesting an analysis that will override the previous options. This override is done only for the specific analysis. See <a href="https://khulnasoft.github.io/docs/ThreatMatrix/advanced_usage/#customize-analyzer-execution">Customize analyzer execution at time of request</a>
+- You can choose to provide runtime configuration when requesting an analysis that will override the previous options. This override is done only for the specific analysis. See <a href="https://khulnasoft.github.io/devsec-docs/ThreatMatrix/advanced_usage/#customize-analyzer-execution">Customize analyzer execution at time of request</a>
 
 <div class="admonition note">
 <p class="admonition-title">Playbook Exception</p>

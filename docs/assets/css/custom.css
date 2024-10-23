@@ -133,6 +133,10 @@ th {
   white-space: nowrap;
 }
 
+.md-typeset a {
+  text-decoration: underline;
+}
+
 /* Works on Chrome, Edge, and Safari */
 html,
 body {

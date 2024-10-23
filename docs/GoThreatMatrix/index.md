@@ -143,7 +143,7 @@ Licensed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 
 - [Threatmatrix](https://github.com/khulnasoft/ThreatMatrix)
 - [Documentation](https://threatmatrix.readthedocs.io/en/latest/)
-- [API documentation](https://khulnasoft.github.io/docs/ThreatMatrix/api_docs)
+- [API documentation](https://khulnasoft.github.io/devsec-docs/ThreatMatrix/api_docs)
 - [Examples](./examples/)
 
 # FAQ
